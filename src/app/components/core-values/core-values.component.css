@@ -1,0 +1,224 @@
+
+
+
+.coreValues {
+ 
+  flex-wrap: wrap;
+  max-width: 1200px;
+
+}
+.buttonBg
+{
+    background-color: #FFD401;
+}
+
+.coreValues .card {
+  min-width: 280px;
+  height: 400px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+.coreValues .card:nth-child(1) .box1 .content a {
+  background: #2196f3;
+}
+
+ .coreValues .card:nth-child(2) .box1  .content a {
+  background: #e91e63;
+}
+
+.coreValues .card:nth-child(3) .box1 .content  a {
+  background: #23c186;
+} 
+
+.coreValues .card .box1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.coreValues .card .box1:hover {
+    transform: scale(1.1);
+}
+
+.coreValues .card .box1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.coreValues .card .box1 .content{
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.coreValues .card .box1 .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.coreValues .card .box1 .content h3 {
+  min-height: 70px;
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-top: 15px;
+}
+
+.coreValues .card .box1 .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+  min-height: 175px;
+ 
+}
+.expertiseColumns
+{
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800 !important;
+}
+
+.coreValues .card .box1 .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: -9px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.coreValues .card .box1 .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+}
+
+
+@media (max-width: 576px) {
+  .coreValues {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+
+  }
+
+  .coreValues .card {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    /* margin: 35px; */
+    transition: 0.5s;
+    margin-left: 10px !important;
+    margin-top: 30px !important;
+  }
+
+
+}
+
+/* Tablet responsive */
+
+@media (min-width: 768px) {
+  .coreValues .card {
+    position: relative;
+
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 60px;
+    transition: 0.5s;
+  }
+}
+/* From uiverse.io by @abrahamcalsin */
+button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #183153;
+  font-family: "Barlow Condensed", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+ }
+ 
+ button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #FFD401;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+ }
+ 
+ button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+ }
+ 
+ button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 5px 5px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ button:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+ }
+ 
+ @keyframes scaleUp {
+  0% {
+   transform: scale(1);
+  }
+ 
+  50% {
+   transform: scale(0.95);
+  }
+ 
+  100% {
+   transform: scale(1);
+  }
+ }
+ 

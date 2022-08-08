@@ -1,0 +1,156 @@
+<div class="container-fluid bg-cover" data-aos="fade-up">
+  <div class="container pt-5">
+    <h1
+      class="display-5 fw-bold text-white text-center rounded pb-3 p-1 expertiseColumns"
+    >
+      Our Team
+    </h1>
+    <div class="divider"></div>
+    <div
+      id="carouselExample"
+      class="carousel teamCarousel slide pb-5"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide-to="0"
+          class="active buttonBg"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          class="active buttonBg"
+          data-bs-target="#carouselExample"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          class="active buttonBg"
+          data-bs-target="#carouselExample"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active shadow">
+          <div class="row justify-content-evenly p-2">
+            <div
+              class="col-lg-3 Teamcolumns col-sm-4 col-md-6 p-4 rounded teamCols service-bg shadow bg-white"
+              *ngFor="let team of teamArray; let i = index"
+            >
+              <div class="image text-center">
+                <img src="{{ team.url }}" class="img" alt="..." />
+              </div>
+              <div class="sliderContent pt-3 text-dark text-center rounded">
+                <h5>{{ team.name }}</h5>
+                <h2 class="fs-5 fw-lighter">{{ team.designation }}</h2>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 Teamcolumns col-sm-4 col-md-6 p-4 rounded teamCols shadow service-bg bg-white"
+            >
+              <div class="image text-center">
+                <img src="{{ First }}" class="img" alt="..." />
+              </div>
+              <div class="text-dark text-center rounded pt-3">
+                <h5>Andrew Khan</h5>
+                <h2 class="fs-5 fw-lighter">Web developer</h2>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 Teamcolumns col-sm-4 col-md-6 p-4 rounded teamCols service-bg shadow bg-white"
+            >
+              <div class="image text-center">
+                <img src="{{ First }}" class="img" alt="..." />
+              </div>
+              <div class="text-dark text-center rounded pt-3">
+                <h5>Andrew Khan</h5>
+                <h2 class="fs-5 fw-lighter">Web developer</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item shadow">
+          <div class="row justify-content-evenly p-2">
+            <div
+              class="col-lg-3 Teamcolumns col-sm-4 col-md-6 p-4 rounded teamCols shadow service-bg bg-white"
+            >
+              <div class="image text-center">
+                <img src="{{ First }}" class="img" alt="..." />
+              </div>
+              <div
+                class="sliderContent text-dark text-center rounded pt-3 text-dark rounded"
+              >
+                <h5>Andrew Khan</h5>
+                <h2 class="fs-5 fw-lighter">Web developer</h2>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 Teamcolumns col-sm-4 col-md-6 p-4 rounded teamCols service-bg shadow bg-white"
+            >
+              <div class="image text-center">
+                <img src="{{ First }}" class="img" alt="..." />
+              </div>
+              <div class="text-dark text-center rounded pt-3 text-dark rounded">
+                <h5>Andrew Khan</h5>
+                <h2 class="fs-5 fw-lighter">Web developer</h2>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 Teamcolumns col-sm-4 col-md-6 p-4 rounded teamCols shadow service-bg bg-white"
+            >
+              <div class="image text-center">
+                <img src="{{ First }}" class="img" alt="..." />
+              </div>
+              <div class="text-dark text-center rounded pt-3 text-dark rounded">
+                <h5>Andrew Khan</h5>
+                <h2 class="fs-5 fw-lighter">Web developer</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item shadow">
+          <div class="row justify-content-evenly p-2">
+            <div
+              class="col-lg-3 Teamcolumns col-sm-4 col-md-6 p-4 rounded teamCols service-bg shadow bg-white"
+            >
+              <div class="image text-center">
+                <img src="{{ First }}" class="img" alt="..." />
+              </div>
+              <div class="sliderContent text-dark text-center rounded pt-3">
+                <h5>Andrew Khan</h5>
+                <h2 class="fs-5 fw-lighter">Web developer</h2>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 Teamcolumns col-sm-4 col-md-6 p-4 rounded teamCols shadow service-bg bg-white"
+            >
+              <div class="image text-center">
+                <img src="{{ First }}" class="img" alt="..." />
+              </div>
+              <div class="text-dark text-center rounded pt-3">
+                <h5>Andrew Khan</h5>
+                <h2 class="fs-5 fw-lighter">Web developer</h2>
+              </div>
+            </div>
+            <div
+              class="col-lg-3 Teamcolumns col-sm-4 col-md-6 p-4 rounded teamCols shadow service-bg bg-white"
+            >
+              <div class="image text-center">
+                <img src="{{ First }}" class="img" alt="..." />
+              </div>
+              <div class="text-dark text-center rounded pt-3">
+                <h5>Andrew Khan</h5>
+                <h2 class="fs-5 fw-lighter">Web developer</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

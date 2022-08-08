@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+.shopHeading
+{
+    
+    background-color: black !important  ;
+}
+.btn-solid
+{
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    background-color: #00d1f9;
+    border: none;
+}
+.btn-solid {
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    background-color: #ffc107;
+    border: none;
+}
+@media  (max-width: 576px) {
+	.ContactUSBar
+    {
+    text-align: center !important;
+    }
+    .contactUSBtn
+    {
+        margin-top: 10px;
+        text-align: center !important;
+    }
+    .footerBottom1
+    {
+        text-align: center !important;
+    }
+    .footerBottom2
+    {
+        padding-left: 100px !important;
+    }
+}
+
+@media  (max-width: 1280px) {
+	.footerBottom2
+    {
+        margin-top: -10px;
+        padding-left: 100px !important;
+    }
+   
+  
+}

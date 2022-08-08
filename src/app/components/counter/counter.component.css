@@ -1,0 +1,186 @@
+.vl {
+    border-left: 6px solid rgb(255, 255, 255);
+    height: 100px;
+  }
+
+.client-count-wrp {
+    background: #353030;
+    padding: 100px 0;
+}
+
+.heading h4 {
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-family: "Barlow Condensed" , sans-serif;
+        font-weight: 800;
+        margin-top: -67px;
+}
+
+.client-count-wrp-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards h4 {
+    color: #fff;
+    font-size: 70px;
+    line-height: 65px;
+    
+}
+
+.cards:first-child h4 {
+    color: #ffc107;
+}
+
+.cards:last-child h4 {
+    color: #ffffff;
+}
+
+.cards:nth-child(2) h4 {
+    color: #ffffff;
+}
+
+.cards:nth-child(3) h4 {
+    color: #ffc107;
+}
+.cards:nth-child(4) h4 {
+    color: #ffffff;
+}
+
+.cards p {
+    color: #fff;
+    font-size: 20px;
+}
+.bg-cover {
+	background-image: linear-gradient(rgba(199, 208, 17, 0.7), rgba(0, 0, 0, 0.7)),url(/assets/images/counter.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+    
+}
+
+@media (max-width:1280px) {
+    .mt-100 {
+        margin-top: 30px !important;
+    }
+    .client-count-wrp {
+        padding: 40px 0;
+    }
+    .client-count-wrp-inner {
+        flex-direction: column;
+    }
+    .cards h4 {
+        font-size: 50px;
+        line-height: 40px;
+    }
+    .cards {
+        margin: 20px 0;
+    }
+    .client-count-wrp {
+        padding: 25px 0;
+        margin: 0 25px;
+    }
+    .heading
+   {
+    margin-top: 50px !important;
+    margin-left: 0px;
+   }
+   .CounterCount
+   {
+    margin-left: 100px ;
+   }
+
+   .heading h4 {
+  font-size: 20px !important;
+
+}
+
+   
+    /****/
+}
+@media (max-width:991px) {
+    .mt-100 {
+        margin-top: 30px !important;
+    }
+    .client-count-wrp {
+        padding: 40px 0;
+    }
+    .client-count-wrp-inner {
+        flex-direction: column;
+    }
+    .cards h4 {
+        font-size: 50px;
+        line-height: 40px;
+    }
+    .cards {
+        margin: 20px 0;
+    }
+    .client-count-wrp {
+        padding: 25px 0;
+        margin: 0 25px;
+    }
+    .heading
+   {
+    margin-top: 50px !important;
+    margin-left: 0px;
+   }
+   .CounterCount
+   {
+    margin-left: 250px ;
+   }
+
+   .heading h4 {
+  font-size: 40px !important;
+
+}
+
+
+   
+    /****/
+}
+
+@media (max-width:576px) {
+    .mt-100 {
+        margin-top: 30px !important;
+    }
+    .client-count-wrp {
+        padding: 40px 0;
+    }
+    .client-count-wrp-inner {
+        flex-direction: column;
+    }
+    .cards h4 {
+        font-size: 50px;
+        line-height: 40px;
+    }
+    .cards {
+        margin: 20px 0;
+    }
+    .client-count-wrp {
+        padding: 25px 0;
+        margin: 0 25px;
+    }
+    .heading
+   {
+    margin-top: 50px !important;
+    margin-left: 0px;
+   }
+   .CounterCount
+   {
+    margin-left: 40px ;
+   }
+
+   .heading h4 {
+  font-size: 30px !important;
+
+}
+
+   
+    /****/
+}
+
+
+
+

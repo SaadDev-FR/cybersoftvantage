@@ -1,0 +1,99 @@
+<nav class="navbar navbar-expand-lg fade-in-image navBorder">
+  <div class="logoimageDiv text-center mx-4 w-25">
+    <a href="#"
+      ><img class="mt-2 img-fluid logoImage" src="{{ LogoImageSrc }}" />
+    </a>
+  </div>
+  <button
+    class="navbar-toggler bg-primary"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarTogglerDemo01"
+    aria-controls="navbarTogglerDemo01"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <ul class="navbar-nav topnav me-auto mb-2 mb-lg-0 fw-bold">
+      <li class="nav-item">
+        <a class="nav-link navItemClr px-3" aria-current="page" routerLink=""
+          >HOME</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navItemClr px-3" routerLink="about-us">ABOUT US</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navItemClr px-3" routerLink="services-component"
+          >SERVICES</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navItemClr px-3" routerLink="careers">CAREERS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navItemClr px-3" routerLink="contact-us"
+          >CONTACT US
+        </a>
+      </li>
+      <li class="nav-item d-lg-none d-sm-block d-md-block">
+        <button
+          class="btn bg-warning navLoginButton text-white p-2"
+          type="submit"
+          (click)="navigateToAdmin()"
+        >
+          Login
+        </button>
+      </li>
+      <li class="d-none d-sm-none d-md-block mx-5 loginMain">
+        <button
+          class="btn bg-warning p-1 px-5 text-white offset-lg-11"
+          type="submit"
+          (click)="navigateToAdmin()"
+        >
+          Login
+        </button>
+      </li>
+      <!-- <li class="d-none d-sm-none d-md-block">
+        <button class="button socialButton offset-lg-9 w-100">
+          <div class="icon px-1">
+            <a
+              class="w-100"
+              href="https://www.facebook.com/csvantage "
+              target="_blank"
+            >
+              <img
+                class="w-100"
+                src="https://img.icons8.com/color/48/000000/facebook-new.png"
+            /></a>
+            <a
+              class="w-100"
+              href="
+            https://www.linkedin.com/company/cybersoft-vantage-csv/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BZvecpuqkSbmPJlryfZ5MHA%3D%3D
+            "
+              target="_blank"
+            >
+              <img
+                class="w-100"
+                src="https://img.icons8.com/color/48/000000/linkedin.png"
+            /></a>
+            <a
+              class="w-100"
+              href=" https://www.instagram.com/csvantage/"
+              target="_blank"
+            >
+              <img
+                class="w-100"
+                src="https://img.icons8.com/color/48/000000/instagram-new--v1.png"
+            /></a>
+          </div>
+          <div>
+            <p class="fw-bold mt-3 text-dark px-3">Follow US</p>
+          </div>
+        </button>
+      </li> -->
+    </ul>
+  </div>
+</nav>

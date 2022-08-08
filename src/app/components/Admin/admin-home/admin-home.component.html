@@ -1,0 +1,75 @@
+<form class="mx-5 mt-5" [formGroup]="myForm" (ngSubmit)="submit()">
+  <h1 class="mx-5">Upload Employee Data</h1>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input
+      required
+      formControlName="name"
+      id="name"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="name">Designation</label>
+    <input
+      formControlName="detail"
+      id="detail"
+      type="text"
+      class="form-control w-50"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="file">Image</label>
+    <input
+      formControlName="file"
+      id="file"
+      type="file"
+      name="files"
+      accept=".png, .jpg, .jpeg ,.mp4"
+      multiple
+      class="form-control w-50"
+      (change)="onFileChange($event)"
+    />
+  </div>
+
+  <button class="btn btn-primary mt-3" type="submit">Submit</button>
+  <hr class="text-primary" />
+</form>
+
+<form class="mx-5 mt-5" [formGroup]="myForm" (ngSubmit)="submit()">
+  <h1 class="mx-5">Upload Job Positions</h1>
+  <div class="form-group">
+    <label for="name">Job Title</label>
+    <input
+      required
+      formControlName="name"
+      id="name"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="name">Job Details</label>
+    <input
+      formControlName="detail"
+      id="detail"
+      type="text"
+      class="form-control w-50"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="file">Experience</label>
+    <input
+      formControlName="file"
+      id="file"
+      type="file"
+      name="files"
+      accept=".png, .jpg, .jpeg ,.mp4"
+      multiple
+      class="form-control w-50"
+      (change)="onFileChange($event)"
+    />
+  </div>
+
+  <button class="btn btn-primary mt-3" type="submit">Submit</button>
+  <hr class="text-primary" />
+</form>

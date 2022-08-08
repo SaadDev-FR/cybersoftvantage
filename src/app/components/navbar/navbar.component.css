@@ -1,0 +1,91 @@
+/* .navbar {
+    background-color: var(--navbar-scroll);
+    transition: background-color 1s ease;
+    color: var(--navbar-scroll-text) !important;
+    -webkit-box-shadow: var(--navbar-scroll-shadow);
+    box-shadow: var(--navbar-scroll-shadow);
+} */
+.logoImage
+{
+    width: 50%;
+    height: 50%;
+}
+.fade-in-image { animation: fadeIn 5s; }
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+/* From uiverse.io by @fanishah */
+.button {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    background: white;
+    color: white;
+    padding: 0.35em 0;
+    font-size: 17px;
+    border: none;
+    border-radius: 0.7em;
+    letter-spacing: 0.08em;
+    position: relative;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 2.1em;
+    padding-left: 3em;
+    padding-right: 0.7em;
+}
+
+.button .icon {
+    background: #fff0f2;
+    margin-right: 1em;
+    height: 3.0em;
+    width: 3.0em;
+    border-radius: 0.5em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0.3em;
+    transition: all .7s;
+}
+.button:hover .icon {
+    width: calc(80% - 0.6rem);
+}
+
+.topnav .nav-link:hover {
+    border-bottom: 3px solid rgb(190, 201, 30);
+}
+.topnav
+{
+    font-weight: 800 !important;
+    margin-left: 100px !important;
+}
+.loginMain
+{
+    font-weight: 800 !important;
+    font-family: "Barlow Condensed" ,sans-serif;
+    margin-left: 86px !important;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+   
+}
+
+@media only screen and (max-width: 767px) {
+   
+    .topnav {
+        margin-left: 30px !important;
+    }
+    .navbar-toggler {
+        margin-right: 20px !important;
+    }
+    .logoimageDiv
+    {
+        width: 50% !important;
+    }
+    .socialButton
+    {
+        margin-top: 10px !important;
+    }
+}

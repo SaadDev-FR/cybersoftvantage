@@ -1,0 +1,594 @@
+
+/*  carousel      */
+
+.carousel-item {
+	height: 100vh;
+	min-height: 300px;
+}
+
+.bg-1 {
+	background-image: url(/assets/images/mainImage1.jpg);
+}
+
+.bg-2 {
+	background-image: url(/assets/images/mainImage2.jpg);
+}
+
+.bg-3 {
+	background-image: url(/assets/images/mainImage2.jpg);
+}
+
+.bg-1,
+.bg-2,
+.bg-3 {
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.carousel-caption {
+	bottom: 317px;
+	z-index: 2;
+}
+
+.carousel-caption h5 {
+	font-size: 85px;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+	margin-top: 25px;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.carousel-caption p {
+	width: 60%;
+	margin: auto;
+	font-size: 18px;
+	line-height: 1.9;
+}
+
+.carousel-caption a {
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 5px 20px;
+	display: inline-block;
+	color: #fff;
+	margin-top: 15px;
+	border-radius: 5px;
+}
+
+.carousel-inner:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 1;
+}
+
+.carousel-indicators {
+	bottom: 200px;
+}
+
+.carousel-indicators button {
+	width: 100px !important;
+}
+
+.thunmbnail1 {
+	margin-left: 1000px;
+	margin-top: 11px;
+}
+
+
+.aboutHeading {
+	color: rgb(48, 12, 253);
+}
+.logoImage
+{
+    width: 50%;
+    height: 50%;
+}
+
+
+@media (max-width: 991px) {
+	.navbar-nav {
+		text-align: center;
+	}
+
+	.navbar-collapse {
+		background: #fff;
+	}
+
+	.navbar-collapse .nav-item .nav-link {
+		color: #000;
+	}
+
+	.carousel-caption {
+		bottom: 350px;
+	}
+
+	.carousel-caption h5 {
+		font-size: 65px;
+	}
+
+	.carousel-caption p {
+		font-size: 18px;
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+@media  (max-width: 767px) {
+	.navbar-nav {
+		text-align: center;
+	}
+
+	.navbar-collapse .nav-item .nav-link {
+		color: #000;
+	}
+
+	.carousel-caption {
+		bottom: 350px;
+	}
+
+	.carousel-caption h5 {
+		font-size: 25px;
+	}
+
+	.carousel-caption p {
+		font-size: 12px;
+		width: 100%;
+	}
+
+	.carousel-caption a {
+		padding: 10px 15px;
+		font-size: 15px;
+	}
+
+	.navbar-collapse {
+		background: #fff;
+	}
+
+	.carousel-indicators {
+		margin-bottom: 100px !important;
+	}
+    .bg-1,
+.bg-2,
+.bg-3 {
+	-webkit-background-size: cover;
+	background-size: cover;
+    background-position: center;
+}
+.skillsContainer
+{
+ margin-left: 20px ;
+
+}
+.imageCol
+{
+    margin-top: 20px !important;
+}
+.card1 {
+    width: 50%;
+}
+.skilsColumns
+{
+    margin-bottom: 50px !important;
+}
+.aboutSecCol
+{
+    width:75% !important
+}
+.aboutRow
+{
+    margin-bottom: 20px !important;
+}
+
+
+}
+@media (max-width: 576px) {
+    
+    .card1 {
+        width: 75% !important;
+    }
+   
+    .skilsColumns
+    {
+        margin-bottom: 50px !important;
+    }
+    .parrentDiv
+    {
+        margin-left: 20px !important;
+    }
+    .Skillbutton
+    {
+        margin-left: -30px !important;
+        
+    }
+    .contact_field h3 {
+        color: #0d6efd;
+        font-size: 40px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .skillsHeading
+    {
+        margin-left: -50px !important
+         ;
+    }
+
+}
+
+
+.coverBg {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(78, 74, 74, 0.8)), url("https://bit.ly/2rlzaXi");
+    min-height: 500px; 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.parrentDiv {
+    flex-wrap: wrap;
+}
+.rounded
+{
+    border-radius: 10px !important;
+}
+
+.card1 {
+    width: 23%;
+}
+
+.ToggleButton {
+    text-decoration: none;
+    
+}
+
+
+
+
+
+
+/* ******************************8 */
+body{
+    margin-top:20px;
+    background:#eee;
+}
+.card::after {
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 35px;
+    background-color: #fff;
+    box-shadow: 0 19px 28px 5px rgba(64,64,64,0.09);
+    content: '';
+    z-index: -1;
+}
+a.card {
+    text-decoration: none;
+}
+
+.card {
+    position: relative;
+    border: 0;
+    border-radius: 0;
+    background-color: #fff;
+    box-shadow: 0 12px 20px 1px rgba(64,64,64,0.09);
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,0.125);
+    border-radius: .25rem;
+    width: 350px;
+    
+}
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+.mr-auto, .mx-auto {
+    margin-right: auto !important;
+}
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.bg-white {
+    background-color: #fff !important;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+
+.mr-auto, .mx-auto {
+    margin-right: auto !important;
+}
+.d-block {
+    display: block !important;
+}
+img, figure {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.card-text {
+    padding-top: 12px;
+    color: #8c8c8c;
+}
+
+.text-sm {
+    font-size: 12px !important;
+}
+p, .p {
+    margin: 0 0 16px;
+}
+
+.card-title {
+    margin: 0;
+   
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.pt-1, .py-1 {
+    padding-top: .25rem !important;
+}
+
+.head-icon{
+    margin-top:18px;
+    color:#FF4500
+}
+
+.service-grid {
+    background: #fcfcfc;
+}
+    .service-title h4 {
+    position: relative;
+    display: inline-block;
+}
+.service-icon {
+    position: relative;
+}
+.service-title p {
+    padding: 0 190px;
+    margin-bottom: 10px;
+}
+.about-info-text h2 {
+    margin-bottom: 23px;
+    text-transform: capitalize;
+    font-weight: 700;
+    line-height: .9;
+}
+.about-info-text p {
+    padding: 0 100px;
+    font-size: 18px;
+    margin-bottom: 26px;
+      position: relative;
+}
+.about-content p {
+    margin-bottom: 0;
+}
+.about-info-text a {
+    margin-bottom: 20px;
+      position: relative;
+}
+.service-icon i {
+    font-size: 40px;
+    color: #e8bc00;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.service-wrap {
+    border: 1px solid #e6e6e6;
+    padding: 50px 30px;
+      position: relative;
+}
+
+.service-wrap p{
+      position: relative;
+}
+
+.service-wrap:hover {
+    background-image: url(https://i.ibb.co/mykzQks/services1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: local;
+    transition: all .5s;
+}
+
+.service-wrap:hover:before {
+    background: rgba(0, 0, 0, 0.2901960784313726);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    content: "";
+    top: 0;
+    opacity: 1;
+}
+
+.service-wrap:hover h4,.service-wrap:hover p{
+    color: #fff;
+}
+.service-wrap h4 {
+    font-weight: 600;
+    color: #1e2331;
+    margin-bottom: 17px;
+    font-size: 18px;
+    text-transform: capitalize;
+      position: relative;
+}
+.service-wrap a {
+    font-size: 14px;
+    font-weight: 600;
+      position: relative;
+
+}
+/* about */
+.coverBg {
+    background-image: linear-gradient(rgba(199, 208, 17, 0.7), rgba(0, 0, 0, 0.7)), url("/assets//images//intro1.jpg");
+    min-height: 500px; 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;}
+
+
+body {
+	
+    font-family: "Barlow Condensed", sans-serif;
+	line-height: 1.8;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 900 !important;
+	
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.4s ease;
+	color: #20212c;
+}
+
+img {
+	width: 100%;
+}
+
+
+.aboutSecCol
+{
+	background: linear-gradient(rgba(199, 208, 17, 0.7), rgba(0, 0, 0, 0.7));
+	border-radius: 30px solid ;
+}
+
+.bg-cover {
+	background-image: linear-gradient(rgba(199, 208, 17, 0.7), rgba(0, 0, 0, 0.7)),url(/assets/images/aboutusff.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.hero-section {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn {
+	padding: 14px 22px;
+	transition: all 0.3s ease;
+}
+
+.btn-main {
+	background: linear-gradient(to right, #00e0fe, #1107fe);
+	border-radius: 100px;
+	border: none;
+	font-weight: 600;
+	color: #fff;
+}
+
+.btn:hover {
+	color: #fff;
+	transform: translateY(-5px);
+}
+
+.aboutHeading
+{
+    color: honeydew;
+}
+
+/* career */
+.careerImage
+{
+    width: 100%;
+
+}
+
+
+/* let Work together */
+.feature img {
+    background-image: linear-gradient(#00e0fe, #1107fe),url(/assets/images/aboutusff.jpg);
+	background-position: center;;
+  -webkit-text-fill-color: transparent;
+  font-size: 54px;
+  border-radius: 70%;
+  
+}
+
+.cta {
+    border: none;
+    background: none;
+   }
+   
+   .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 10px;
+    padding-right: 15px;
+    text-transform: uppercase;
+   }
+   
+   .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+   }
+   
+   .cta:hover svg {
+    transform: translateX(0);
+   }
+   
+   .cta:active svg {
+    transform: scale(0.9);
+   }
+   
+   .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+   }
+   
+   .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+   }
+   
+   .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+   }

@@ -1,0 +1,214 @@
+<!-- slider -->
+<section>
+  <div
+    class="carousel slide"
+    data-bs-ride="carousel"
+    id="carouselExampleCaptions"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active bg-1">
+        <div
+          class="carousel-caption carouselCAption"
+          data-aos="fade-down"
+          data-aos="fade-down"
+        >
+          <h5>Cyber Soft <span class="text-warning"> Vantage</span></h5>
+          <p>Lorem ipsum dolor sit amet.</p>
+          <a class="bg-warning text-white" href="#">Read More</a>
+        </div>
+      </div>
+      <div class="carousel-item bg-2">
+        <div class="carousel-caption text-center">
+          <h5>Worldwide <span class="text-warning">Recognition</span></h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Temporibus, culpa.
+          </p>
+          <a class="bg-warning text-white" href="#">Learn More</a>
+        </div>
+      </div>
+      <div class="carousel-item bg-3">
+        <div class="carousel-caption">
+          <h5>Effordable <span class="text-warning">Budget</span></h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Temporibus, culpa.
+          </p>
+          <a class="bg-warning text-white" href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!--thumbnails-->
+    <div class="carousel-indicators">
+      <button
+        aria-label="Slide 1"
+        class="active"
+        data-bs-slide-to="0"
+        data-bs-target="#carouselExampleCaptions"
+        type="button"
+      >
+        <img
+          class="img-fluid thunmbnail1"
+          src="/assets/images/mainImage1.jpg"
+        />
+      </button>
+      <button
+        aria-label="Slide 2"
+        data-bs-slide-to="1"
+        data-bs-target="#carouselExampleCaptions"
+        type="button"
+      >
+        <img
+          class="img-fluid thunmbnail1"
+          src="/assets/images/mainImage2.jpg"
+        />
+      </button>
+      <button
+        aria-label="Slide 3"
+        data-bs-slide-to="2"
+        data-bs-target="#carouselExampleCaptions"
+        type="button"
+      >
+        <img
+          class="img-fluid thunmbnail1"
+          src="/assets/images/mainImage3.jpg"
+        />
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- skills -->
+<section>
+  <div class="container-fluid skillsContainer bg-white pb-4 mt-5">
+    <h1 class="fs-1 text-center skillsHeading" data-aos="zoom-in">
+      Our Expertise
+    </h1>
+    <div class="d-flex parrentDiv mt-4">
+      <ng-container *ngFor="let skill of skills; let i = index">
+        <ng-container *ngIf="i <= showMore">
+          <div
+            class="shadow card1 mx-2 mb-4 mx-md-auto rounded"
+            data-aos="fade-up"
+          >
+            <div class="card-body text-center">
+              <div>
+                <img
+                  class="img-fluid Allimages"
+                  [src]="skill.imageUrl"
+                  alt="alternative"
+                />
+              </div>
+              <hr />
+              <h1 class="text-center fs-4">
+                {{ skill.heading1 }}
+              </h1>
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+    <div class="text-center Skillbutton">
+      <a
+        class="px-md-4 w-100 h-100 bg-warning text-white ToggleButton p-2 rounded fw-bold"
+        *ngIf="showbtn"
+        (click)="show()"
+        >Hide skills</a
+      >
+      <a
+        class="px-md-4 w-100 h-100 bg-warning text-white ToggleButton p-2 rounded fw-bold"
+        *ngIf="!showbtn"
+        (click)="show()"
+        >More skills</a
+      >
+    </div>
+  </div>
+</section>
+
+<!-- about section -->
+<section class="bg-cover hero-section">
+  <div class="overlay"></div>
+  <div class="container text-white text-center">
+    <div class="row aboutRow">
+      <div class="col-lg-4 imageCol" data-aos="zoom-in">
+        <img
+          class="img-fluid"
+          src="assets/images/logo2.png"
+          alt="alternative"
+        />
+      </div>
+      <div class="col-6 mx-auto aboutSecCol p-3">
+        <h1 class="display-6 mt-5" data-aos="zoom-in">
+          CyberSoft Vantage – CSV
+        </h1>
+        <p class="my-4 fs-4" data-aos="fade-up">
+          was established with the ambition to provide unparallel services and
+          encouraging people to present their business <br />
+          in the international market and revolutionize<br />
+          IT industry
+        </p>
+        <a href="#" data-aos="fade-up" class="btn btn-main">Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- career section -->
+
+<section class="text-center mt-2 p-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 section-intro text-center" data-aos="fade-up">
+        <div class="text-center mt-3"><h1>LETS WORK TOGETHER</h1></div>
+        <div class="divider"></div>
+      </div>
+    </div>
+    <div class="row gx-4 gy-5 mt-3">
+      <div class="col-md-4 feature" data-aos="fade-up">
+        <div class="icon">
+          <img
+            class="w-25 h-25 p-3"
+            src="https://img.icons8.com/ios-filled/100/FFFFFF/engage.png"
+          />
+        </div>
+        <h5 class="mt-4 mb-3">ENGAGE</h5>
+
+        <button class="cta"></button>
+      </div>
+      <div class="col-md-4 feature" data-aos="fade-up">
+        <div class="icon">
+          <img
+            class="w-25 h-25 p-3"
+            src="https://img.icons8.com/material-outlined/96/FFFFFF/checked-2--v1.png"
+          />
+        </div>
+        <h5 class="mt-4 mb-3">DO RIGHT</h5>
+        <button class="cta"></button>
+      </div>
+      <div class="col-md-4 feature" data-aos="fade-up">
+        <div class="icon">
+          <img
+            class="w-25 h-25 p-3"
+            src="https://img.icons8.com/external-filled-outline-wichaiwi/64/FFFFFF/external-success-workation-filled-outline-wichaiwi.png"
+          />
+        </div>
+        <h5 class="mt-4 mb-3">EXCEL/SUCEED</h5>
+        <button class="cta"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- project management section -->
+<section>
+  <app-project-management></app-project-management>
+</section>
+<!-- landing page services -->
+<!-- <section><app-landing-service-section></app-landing-service-section></section> -->
+<!-- core values -->
+<!-- <section><app-core-values></app-core-values></section> -->
+<!-- counter section -->
+<app-counter></app-counter>
+<!-- team section -->
+<!-- <app-team></app-team> -->

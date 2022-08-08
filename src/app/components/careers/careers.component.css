@@ -1,0 +1,21 @@
+.bg-cover {
+    background-image: linear-gradient(rgba(199, 208, 17, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/career-steps.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .careerHeading
+  {
+    background-color: #ffc107;
+    border-radius: 20px ;
+    width: 20% !important;
+  }
+  .aboutSecCol
+  {
+    margin-top: 200px ;
+  }
+  .imageCol2
+  {
+    margin-top: 70px ;
+  }
