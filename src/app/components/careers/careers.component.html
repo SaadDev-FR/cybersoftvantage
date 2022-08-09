@@ -12,19 +12,63 @@
   </div>
 </section>
 
-<section>
+<section class="container-fluid">
+  <div class="row aboutRow">
+    <div class="col-lg-6 col-sm-10 col-md-6 mx-lg-5 p-4 mt-lg-5 firstColumn">
+      <h1 class="display-6 mt-5 fw-bold" data-aos="zoom-in">
+        Talent Acquisition Philosophy
+      </h1>
+      <p class="my-4 fs-5" data-aos="fade-up">
+        A quality asset has always been a treasure for any company. For CSV,
+        It’s our employees. We are always looking out for best-in-class talent
+        to be placed at various strategic positions in our company. We believe
+        in our employees who drive our success. We know that we can only deliver
+        on our aspirations if we have the best talent on board
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid bg-dark">
   <div class="container mt-5">
     <div class="row aboutRow">
-      <div class="col-lg-6 imageCol" data-aos="zoom-in">
+      <div class="col-lg-6 col-sm-12 col-md-12 imageCol" data-aos="zoom-in">
         <img
           class="img-fluid"
           src="assets/images/careerN1.gif"
           alt="alternative"
         />
       </div>
-      <div class="col-6 mx-auto aboutSecCol p-3">
+      <div class="col-lg-6 col-sm-12 col-md-12 mx-auto p-3 text-white">
         <h1 class="display-6 mt-5 fw-bold" data-aos="zoom-in">
           Experienced Professionals
+        </h1>
+        <p class="my-4 fs-4" data-aos="fade-up">
+          CSV is proudly operating as one of the leading IT Companies in the
+          region. United by our core values and passion for success, we aim to
+          attract best minds in the industry and further equip them with
+          relevant skills that are essential to enable continuous growth. Join
+          us to embark on an exciting career journey and
+          <b>reinvent yourself!!!</b>
+        </p>
+        <button
+          (click)="moveToJobs()"
+          data-aos="fade-up"
+          class="px-4 rounded btn-main bg-white p-1 fw-bold"
+        >
+          Apply for Job
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container mt-5">
+    <div class="row aboutRow mt-5">
+      <div class="col-lg-6 col-sm-12 col-md-12 mx-auto p-3 mt-lg-5">
+        <h1 class="display-6 mt-lg-5 fw-bold" data-aos="zoom-in">
+          Internship Program
         </h1>
         <p class="my-4 fs-4" data-aos="fade-up">
           was established with the ambition to provide unparallel services and
@@ -32,28 +76,13 @@
           in the international market and revolutionize<br />
           IT industry
         </p>
-        <a href="#" data-aos="fade-up" class="btn btn-main">Read More</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="container-fluid bg-dark">
-  <div class="container mt-5">
-    <div class="row aboutRow mt-5">
-      <div class="col-6 mx-auto p-3 mt-5">
-        <h1 class="display-6 mt-5 text-white fw-bold" data-aos="zoom-in">
-          Internship Program
-        </h1>
-        <p class="my-4 fs-4 text-white" data-aos="fade-up">
-          was established with the ambition to provide unparallel services and
-          encouraging people to present their business <br />
-          in the international market and revolutionize<br />
-          IT industry
-        </p>
-        <a href="#" data-aos="fade-up" class="btn btn-main bg-white"
-          >Read More</a
+        <button
+          (click)="moveToJobs()"
+          data-aos="fade-up"
+          class="px-4 rounded btn-main bg-dark text-white p-1 fw-bold"
         >
+          Apply
+        </button>
       </div>
       <div class="col-lg-6 imageCol2 pb-3" data-aos="zoom-in">
         <img
@@ -66,24 +95,51 @@
   </div>
 </section>
 
-<section>
-  <div class="container mt-5">
-    <div class="row aboutRow">
-      <div class="col-6 mx-auto aboutSecCol p-3">
-        <h1 class="display-6 mt-5" data-aos="zoom-in">
-          CyberSoft Vantage – CSV
+<section class="container-fluid bg-dark">
+  <div class="container csvLifeContainer mt-lg-5">
+    <div class="row csvLifeRow mt-lg-5">
+      <div class="col-lg-6 col-sm-12 col-md-12 mx-auto aboutSecCol p-3">
+        <h1 class="display-6 mt-lg-5 fw-bold text-white" data-aos="zoom-in">
+          Life at Cyber Soft Vantage
         </h1>
-        <p class="my-4 fs-4" data-aos="fade-up">
-          was established with the ambition to provide unparallel services and
-          encouraging people to present their business <br />
-          in the international market and revolutionize<br />
-          IT industry
+        <p
+          class="fs-4 text-white"
+          [ngClass]="{ limitTextHeight: isReadMore }"
+          data-aos="fade-up"
+        >
+          Here at CSV, employees have common interests and perceive themselves
+          as part of a large dynamic and interested family. Whenever, an
+          employee comes up with revolutionary idea they are always motivated by
+          their coworkers and superiors, this makes them excited to think out of
+          the box. At CSV, alongside professional growth employees get
+          opportunities for their physical and psychological development as
+          well. Various activities are arranged like table tennis and chess
+          competitions, hiking and road trips, surprise birthday and pizza
+          parties, biannual appraisal dinners and the list goes on. Employees
+          are always encouraged and cheered up to actively participate in these
+          activities.<b> CSV --- a fun place to work at!!!</b> Employee reward
+          and practical perks program has gained us their trust and positive
+          feedback. Transparent communication with our employees fuels our
+          success and strong corporate culture.
         </p>
-        <a href="#" data-aos="fade-up" class="btn btn-main">Read More</a>
+        <button
+          class="rounded bg-white p-1 fw-bold"
+          type="button "
+          (click)="showText()"
+        >
+          {{ isReadMore ? "Read More" : "Read Less" }}
+        </button>
+        <button
+          (click)="moveToJobs()"
+          data-aos="fade-up"
+          class="px-4 rounded btn-main bg-white p-1 mx-2 fw-bold"
+        >
+          Gallery
+        </button>
       </div>
-      <div class="col-lg-6 imageCol" data-aos="zoom-in">
+      <div class="col-lg-6 col-sm-12 col-md-12 imageCol" data-aos="zoom-in">
         <img
-          class="img-fluid"
+          class="img-fluid d-none d-sm-none d-md-block"
           src="assets/images/careerN1.gif"
           alt="alternative"
         />

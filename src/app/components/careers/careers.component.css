@@ -5,6 +5,8 @@
     background-size: cover;
     background-attachment: fixed;
   }
+ 
+ 
   .careerHeading
   {
     background-color: #ffc107;
@@ -19,3 +21,32 @@
   {
     margin-top: 70px ;
   }
+  .limitTextHeight {
+    height: 35%;
+    overflow: hidden;
+  
+}
+@media  (max-width: 576px) {
+.secondColumn
+{
+  width: 100% !important;
+
+}
+/* .firstColumn
+{
+  margin-left: 29px !important;
+} */
+.careerHeading {
+  background-color: #ffc107;
+  border-radius: 20px;
+  width: 53% !important;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.aboutSecCol {
+  margin-top: 21px;
+}
+  
+}

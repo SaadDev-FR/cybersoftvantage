@@ -1,3 +1,4 @@
+import { JobsFormComponent } from './components/jobs-form/jobs-form.component';
 import { AdminHomeComponent } from './components/Admin/admin-home/admin-home.component';
 import { CareersComponent } from './components/careers/careers.component';
 import { ServicesComponentComponent } from './components/services-component/services-component.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'services-component', component: ServicesComponentComponent },
   { path: 'careers', component: CareersComponent },
   { path: 'admin-home', component: AdminHomeComponent },
+  { path: 'jobs-form', component: JobsFormComponent },
 ];
 
 @NgModule({

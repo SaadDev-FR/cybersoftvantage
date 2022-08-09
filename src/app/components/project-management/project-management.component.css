@@ -23,8 +23,9 @@ h1{
 }
 
 .columns
-{
-	height: 333px;
+{ 
+	width: 280px;
+	height: 370px;
 }
 
 @media (max-width: 768px) {

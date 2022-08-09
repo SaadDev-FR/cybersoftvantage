@@ -18,6 +18,8 @@ import { AdminLoginPanelComponent } from './components/Admin/admin-login-panel/a
 import { AdminHomeComponent } from './components/Admin/admin-home/admin-home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { JobsFormComponent } from './components/jobs-form/jobs-form.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     CareersComponent,
     AdminLoginPanelComponent,
     AdminHomeComponent,
+    JobsFormComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
