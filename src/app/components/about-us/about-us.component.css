@@ -671,11 +671,9 @@ button.contact_form_submit {
 }
 
 
-@media screen and (max-width: 768px) {
+@media (max-width: 767px) {
 
-  .container {
-    width: 100%;
-  }
+  
 
   .column {
     width: 100%;
@@ -685,8 +683,8 @@ button.contact_form_submit {
 
   .container {
     width: 100%;
-    margin-left: -11px;
-  }
+    margin-left: 15px;
+}
 
   .missionVisionHeading {
     margin-left: -11px;
@@ -747,11 +745,14 @@ button.contact_form_submit {
 @media (max-width: 576px) {
   .coreValues {
     display: flex;
-
     flex-wrap: wrap;
     max-width: 1200px;
 
   }
+  .container {
+    width: unset !important;
+    margin: 0px auto;
+}
 
   .coreValues .card {
     position: relative;
@@ -763,7 +764,7 @@ button.contact_form_submit {
     border-radius: 15px;
     /* margin: 35px; */
     transition: 0.5s;
-    margin-left: 30px !important;
+    /* margin-left: 30px !important; */
     margin-top: 30px !important;
   }
 

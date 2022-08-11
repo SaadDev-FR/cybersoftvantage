@@ -177,6 +177,21 @@ button.contact_form_submit {
     border-radius: 30px;
     overflow: hidden;
 } 
+
+/* our services */
+.servicesMain
+{
+  margin-top: -100px;
+}
+.ToggleButton
+{
+  text-decoration: none;
+}
+/* .servicescolumns
+{
+  width: 24% !important;
+} */
+
 @media screen and (max-width: 768px) {
 
     .container {
@@ -261,6 +276,10 @@ button.contact_form_submit {
     margin-top: 30px !important;
     
   }
+  /* .servicescolumns
+{
+  width: unset !important;
+} */
     .coreValues .card {
       position: relative;
       width: 250px;
@@ -356,3 +375,7 @@ button.contact_form_submit {
     }
   
   }
+
+
+
+  

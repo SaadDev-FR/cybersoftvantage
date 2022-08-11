@@ -10,9 +10,13 @@ export class CareersComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
-  moveToJobs() {
-    this.router.navigateByUrl('/jobs-form');
+  moveToInternship() {
+    this.router.navigateByUrl('/intern-advert');
   }
+  moveToJobs() {
+    this.router.navigateByUrl('/jobs-advert');
+  }
+
   isReadMore = true;
 
   showText() {

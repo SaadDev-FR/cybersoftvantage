@@ -16,72 +16,72 @@ export class LandingPageComponent implements OnInit {
     {
       heading1: 'Web Designing',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'Web Develepment',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'App Development & Support',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'Business Analysis',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'Android & IOS',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'Content Management',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'Database Design & maintenance',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'E-Government & Web Applications',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'Project Management',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'Software Installation & Implementation',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'Software Quality Assurance & Testing',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'Media projects',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'IT Solutions and consulting services',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
     {
       heading1: 'UI/UX',
       btn1: 'See More',
-      imageUrl: 'assets/images/wd-1.png',
+      imageUrl: '/assets/images/testImages/testSkills.png',
     },
   ];
   constructor() {}

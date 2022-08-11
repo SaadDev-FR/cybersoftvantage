@@ -1,25 +1,48 @@
+<!-- JobPost -->
 <form class="mx-5 mt-5" [formGroup]="myForm" (ngSubmit)="submit()">
-  <h1 class="mx-5">Upload Employee Data</h1>
+  <h1 class="mx-5">Upload Job Positions</h1>
   <div class="form-group">
-    <label for="name">Name</label>
+    <label for="jobTitle">Job Title</label>
     <input
       required
-      formControlName="name"
-      id="name"
+      formControlName="jobTitle"
+      id="jobTitle"
       type="text"
       class="form-control w-50"
     />
-    <label for="name">Designation</label>
+    <label for="jobType">Job Type</label>
     <input
-      formControlName="detail"
-      id="detail"
+      formControlName="jobType"
+      id="jobType"
       type="text"
       class="form-control w-50"
     />
+    <label for="expertise">Expertise & Requirements</label>
+    <textarea
+      formControlName="expertise"
+      id="expertise"
+      type="text"
+      class="form-control w-50"
+    >
+    </textarea>
+    <label for="deadline">Deadline</label>
+    <input
+      formControlName="deadline"
+      id="deadline"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="jobDesc">Job Description</label>
+    <textarea
+      formControlName="jobDesc"
+      id="jobDesc"
+      type="text"
+      class="form-control w-50"
+    >
+    </textarea>
   </div>
-
   <div class="form-group">
-    <label for="file">Image</label>
+    <label for="file">Uplod advert</label>
     <input
       formControlName="file"
       id="file"
@@ -35,29 +58,51 @@
   <button class="btn btn-primary mt-3" type="submit">Submit</button>
   <hr class="text-primary" />
 </form>
-
-<form class="mx-5 mt-5" [formGroup]="myForm" (ngSubmit)="submit()">
-  <h1 class="mx-5">Upload Job Positions</h1>
+<!-- internPositionPost -->
+<form class="mx-5 mt-5" [formGroup]="internForm" (ngSubmit)="submitIntern()">
+  <h1 class="mx-5">Upload Intern Positions</h1>
   <div class="form-group">
-    <label for="name">Job Title</label>
+    <label for="jobTitle">Internship Title</label>
     <input
       required
-      formControlName="name"
+      formControlName="jobTitle"
       id="name"
       type="text"
       class="form-control w-50"
     />
-    <label for="name">Job Details</label>
+    <label for="jobType">Internship Type</label>
     <input
-      formControlName="detail"
+      formControlName="jobType"
+      id="detail"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="expertise">Expertise & Requirements</label>
+    <textarea
+      formControlName="expertise"
+      id="detail"
+      type="text"
+      class="form-control w-50"
+    >
+    </textarea>
+    <label for="jobDesc">Internship Description</label>
+    <textarea
+      formControlName="jobDesc"
+      id="detail"
+      type="text"
+      class="form-control w-50"
+    >
+    </textarea>
+    <label for="deadline">Deadline</label>
+    <input
+      formControlName="deadline"
       id="detail"
       type="text"
       class="form-control w-50"
     />
   </div>
-
   <div class="form-group">
-    <label for="file">Experience</label>
+    <label for="file">Upload advert</label>
     <input
       formControlName="file"
       id="file"
@@ -67,6 +112,43 @@
       multiple
       class="form-control w-50"
       (change)="onFileChange($event)"
+    />
+  </div>
+
+  <button class="btn btn-primary mt-3" type="submit">Submit</button>
+  <hr class="text-primary" />
+</form>
+<!-- Team add -->
+<form class="mx-5 mt-5" [formGroup]="TeamForm" (ngSubmit)="submitTeam()">
+  <h1 class="mx-5">Upload Employee Data</h1>
+  <div class="form-group">
+    <label for="name">Employee Name</label>
+    <input
+      required
+      formControlName="name"
+      id="name"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="designation">Employee Designation</label>
+    <input
+      formControlName="designation"
+      id="detail"
+      type="text"
+      class="form-control w-50"
+    />
+  </div>
+  <div class="form-group">
+    <label for="file">Employee Image</label>
+    <input
+      formControlName="file"
+      id="file"
+      type="file"
+      name="files"
+      accept=".png, .jpg, .jpeg ,.mp4"
+      multiple
+      class="form-control w-50"
+      (change)="onFileChangeTeam($event)"
     />
   </div>
 

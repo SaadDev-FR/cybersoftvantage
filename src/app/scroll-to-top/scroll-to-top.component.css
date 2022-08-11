@@ -1,0 +1,15 @@
+.scrollTop
+{
+    position: fixed;
+    width: 3%;
+    height: 6%;
+    bottom: 30px;
+    right: 10px;
+     border-radius: 5px;
+     border-radius: 1px solid rgb(255, 255, 255);
+     cursor: pointer;
+     transition: all 0.5s ease 0s;
+     z-index: 100;
+     border: white 1px solid;
+     
+}

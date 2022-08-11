@@ -6,15 +6,15 @@
 }
 
 .bg-1 {
-    background-image: url(/assets/images/mainImage1.jpg);
+    background-image: url(/assets/images/testImages/testSlider.png);
 }
 
 .bg-2 {
-    background-image: url(/assets/images/mainImage2.jpg);
+    background-image: url(/assets/images/testImages/testSlider.png);
 }
 
 .bg-3 {
-    background-image: url(/assets/images/mainImage2.jpg);
+    background-image: url(/assets/images/testImages/testSlider.png);
 }
 
 .bg-1,

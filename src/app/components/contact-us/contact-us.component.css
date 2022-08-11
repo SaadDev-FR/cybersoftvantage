@@ -82,12 +82,13 @@ body{
       border: none;
       color: #fff;
       padding: 10px 15px;
-      width: 100%;
+      /* width: 100%; */
       margin-top: 25px;
       border-radius: 35px;
       cursor: pointer;
       font-size: 14px;
       letter-spacing: 2px;
+      
   }
   .socil_item_inner li{
       list-style: none;
@@ -116,11 +117,15 @@ body{
       border-radius: 30px;
       overflow: hidden;
   } 
+  .form-control
+  {
+    width: 60% !important;
+  }
 
 
 
 
-@media screen and (max-width: 768px) {
+@media  (max-width: 767px) {
 
     
     .contact_field h3 {
@@ -155,7 +160,7 @@ body{
     }
     .contact_info_sec {
       width: 276px;
-      margin-top: 334px;
+      margin-top: 62px;
   
   
     }

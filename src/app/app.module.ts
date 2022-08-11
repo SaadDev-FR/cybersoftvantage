@@ -20,6 +20,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { JobsFormComponent } from './components/jobs-form/jobs-form.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { JobsAdvertComponent } from './components/jobs-advert/jobs-advert.component';
+import { InternFormComponent } from './components/intern-form/intern-form.component';
+import { InternAdvertComponent } from './components/intern-advert/intern-advert.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,10 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     AdminHomeComponent,
     JobsFormComponent,
     GalleryComponent,
+    ScrollToTopComponent,
+    JobsAdvertComponent,
+    InternFormComponent,
+    InternAdvertComponent,
   ],
   imports: [
     BrowserModule,

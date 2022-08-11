@@ -8,7 +8,13 @@ import { map, Observable } from 'rxjs';
 export class TeamServiceService {
   constructor(private http: HttpClient) {}
 
-  getNews(): Observable<any> {
+  postTeam(data: any) {
+    this.http.post('http://localhost:8000/api/team', data).subscribe((res) => {
+      alert(res);
+    });
+  }
+
+  getTeam(): Observable<any> {
     return this.http.get<any>('http://localhost:8000/api/GetTeam').pipe(
       map((res: any) => {
         return res;

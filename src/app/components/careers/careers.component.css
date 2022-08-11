@@ -5,13 +5,17 @@
     background-size: cover;
     background-attachment: fixed;
   }
- 
+ .firstColumn
+ {
+  width: 42%;
+ }
+
  
   .careerHeading
   {
     background-color: #ffc107;
     border-radius: 20px ;
-    width: 20% !important;
+    width: 15% !important;
   }
   .aboutSecCol
   {
@@ -22,7 +26,7 @@
     margin-top: 70px ;
   }
   .limitTextHeight {
-    height: 35%;
+    height: 32%;
     overflow: hidden;
   
 }
@@ -46,7 +50,27 @@
   height: auto;
 }
 .aboutSecCol {
-  margin-top: 21px;
+  margin-top: 166px;
 }
-  
+.firstColumn
+{
+ width: unset !important;
+}
+.limitTextHeight {
+  height: unset !important;
+  overflow: hidden;
+
+}
+}
+@media  (max-width: 767px) {
+  .careerHeading{
+    background-color: #ffc107;
+    border-radius: 20px;
+    width: 30% !important;
+  }
+  .firstColumn
+{
+ width: 100% !important;
+}
+
 }

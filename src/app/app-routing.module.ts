@@ -1,3 +1,6 @@
+import { InternFormComponent } from './components/intern-form/intern-form.component';
+import { JobsAdvertComponent } from './components/jobs-advert/jobs-advert.component';
+import { InternAdvertComponent } from './components/intern-advert/intern-advert.component';
 import { JobsFormComponent } from './components/jobs-form/jobs-form.component';
 import { AdminHomeComponent } from './components/Admin/admin-home/admin-home.component';
 import { CareersComponent } from './components/careers/careers.component';
@@ -24,6 +27,9 @@ const routes: Routes = [
   { path: 'careers', component: CareersComponent },
   { path: 'admin-home', component: AdminHomeComponent },
   { path: 'jobs-form', component: JobsFormComponent },
+  { path: 'intern-advert', component: InternAdvertComponent },
+  { path: 'jobs-advert', component: JobsAdvertComponent },
+  { path: 'intern-form', component: InternFormComponent },
 ];
 
 @NgModule({

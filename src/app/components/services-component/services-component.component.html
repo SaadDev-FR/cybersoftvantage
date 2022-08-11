@@ -11,7 +11,7 @@
 </div>
 
 <!-- skills -->
-<section class="container-fluid">
+<!-- <section class="container-fluid">
   <h1
     class="display-5 fw-bold text-center rounded pb-3 p-1 text-dark mt-4"
     data-aos="zoom-in"
@@ -113,8 +113,8 @@
       </div>
     </div>
   </div>
-</section>
--->
+</section> -->
+
 <!-- what we provide  -->
 
 <!-- <section class="mt-5">
@@ -206,3 +206,44 @@
     </div>
   </div>
 </section> -->
+<!-- Card content -->
+<div class="servicesMain rounded bg-white w-75 h-75 mx-auto shadow">
+  <h1 class="coverHeading fw-bold text-center p-5">
+    A Trusted Name In <br />
+    Software Developement
+  </h1>
+
+  <div
+    class="container mt-5 mx-auto pb-4 row justify-content-center align-item-center"
+  >
+    <ng-container *ngFor="let service of services; let i = index">
+      <div
+        class="servicescolumns rounded col-lg-4 mt-auto p-2 shadow mx-1 col-sm-10 col-md-6 text-center"
+        *ngIf="i <= showMore"
+      >
+        <ng-container>
+          <img class="p-2 img-fluid" src="{{ service.imageUrl }}" />
+          <h1 class="mt-2 fs-5">{{ service.heading1 }}</h1>
+          <!-- <p class="p-large pGraph">
+          {{ service.paragraph }}
+        </p> -->
+        </ng-container>
+      </div>
+    </ng-container>
+
+    <div class="text-center mt-2 pt-2">
+      <a
+        class="px-md-4 w-100 h-100 bg-warning text-white ToggleButton rounded p-2 fw-bold"
+        *ngIf="showbtn"
+        (click)="show()"
+        >Hide Services</a
+      >
+      <a
+        class="px-md-4 w-100 h-100 bg-warning text-white ToggleButton rounded p-2 fw-bold"
+        *ngIf="!showbtn"
+        (click)="show()"
+        >More Services</a
+      >
+    </div>
+  </div>
+</div>

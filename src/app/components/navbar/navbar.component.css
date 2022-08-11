@@ -68,14 +68,24 @@
     margin-left: 86px !important;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media  (max-width: 991px) {
+    .logoImage {
+        width: unset !important;
+        height: unset !important;
+    }
+    .topnav {
+        margin-left: 10px !important;
+    }
+    .navbar-toggler {
+        margin-right: 20px !important;
+    }
    
 }
 
-@media only screen and (max-width: 767px) {
+@media  (max-width: 576px) {
    
     .topnav {
-        margin-left: 30px !important;
+        margin-left: 10px !important;
     }
     .navbar-toggler {
         margin-right: 20px !important;
@@ -87,5 +97,9 @@
     .socialButton
     {
         margin-top: 10px !important;
+    }
+    .logoImage {
+        width: unset !important;
+        height: unset !important;
     }
 }

@@ -25,13 +25,12 @@ export class TeamComponent implements OnInit {
   constructor(private teamServ: TeamServiceService) {}
 
   ngOnInit(): void {
-    this.teamServ.getNews().subscribe((res) => {
+    this.teamServ.getTeam().subscribe((res) => {
       this.teamArray = res;
       for (let i = 0; i < this.teamArray.length; i++) {
         this.teamArray[i].url =
           'http://localhost:8000/' + this.teamArray[i].files[0].filePath;
       }
-      console.log('array data', this.teamArray);
     });
   }
 }

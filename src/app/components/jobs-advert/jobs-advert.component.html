@@ -1,0 +1,33 @@
+<div class="container border mb-4 mt-4" *ngFor="let job of JobsAdvertArray">
+  <div>
+    <table class="p-5">
+      <tr class="border">
+        <th class="p-2">jobTitle</th>
+        <th class="p-2">jobType</th>
+        <th class="p-2">expertise</th>
+        <th class="p-2">jobDesc</th>
+        <th class="p-2">deadline</th>
+        <th class="p-2">Advertisement</th>
+      </tr>
+      <tr class="border">
+        <td class="p-2">{{ job.jobTitle }}</td>
+        <td class="p-2">
+          {{ job.jobType }}
+        </td>
+        <td class="p-2">
+          {{ job.expertise }}
+        </td>
+        <td class="p-2">{{ job.jobDesc }}</td>
+        <td class="p-2">
+          {{ job.deadline }}
+        </td>
+        <td class="p-2"><img src="{{ job.url }}" /></td>
+      </tr>
+      <tr>
+        <td class="p-2 bg-warning">
+          <button class="bg-white fw-bold" (click)="moveToJobs()">Apply</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
