@@ -16,6 +16,14 @@ export class PostInternPostService {
       });
   }
 
+  applyInternPosition(data: any) {
+    this.http
+      .post('http://localhost:8000/api/applyIntern', data)
+      .subscribe((res) => {
+        alert(res);
+      });
+  }
+
   getInternAdvert(): Observable<any> {
     return this.http.get<any>('http://localhost:8000/api/GetInternAdvert').pipe(
       map((res: any) => {

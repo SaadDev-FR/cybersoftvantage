@@ -2,44 +2,61 @@
   <div class="container pt-5 pb-5">
     <div class="border w-50 p-3 bg-white">
       <h1 class="text-center">Apply for job</h1>
-      <form class="border p-5">
-        <label class="fw-bold">Applicant Name</label>
+      <form
+        class="border p-5"
+        [formGroup]="applyJobForm"
+        (ngSubmit)="applyJob()"
+      >
+        <label for="name" class="fw-bold">Applicant Name</label>
         <input
           type="text"
-          name="Name"
+          formControlName="name"
+          name="name"
           class="form-control w-50 form-group"
           placeholder="Name"
           required
         />
-        <label class="fw-bold">Contact Number</label>
+        <label for="pNum" class="fw-bold">Contact Number</label>
         <input
           type="text"
-          name="number"
+          formControlName="pNum"
+          name="pNum"
           class="form-control w-50 form-group"
           placeholder="923*********"
           required
         />
-        <label class="fw-bold">Email</label>
+        <label for="email" class="fw-bold">Email</label>
         <input
           type="email"
+          formControlName="email"
           name="Email"
           class="form-control w-50 form-group"
           placeholder="name21@gmail.com"
           required
         />
-        <label class="fw-bold">Expertise</label>
+        <label for="expertise" class="fw-bold">Expertise</label>
         <textarea
           name="expertise"
+          formControlName="expertise"
           class="form-control w-50 form-group"
           placeholder="Your Expertise + Years of Experience"
           required
         ></textarea>
         <div class="mt-2 fw-bold">
-          <label for="myfile">Upload CV</label><br />
-          <input type="file" id="myfile" name="myfile" />
+          <label for="file">Upload CV</label><br />
+          <input
+            type="file"
+            formControlName="file"
+            id="file"
+            name="files"
+            (change)="onFileChangeApplyJob($event)"
+          />
         </div>
         <br />
-        <button type="submit" class="contact_form_submit fw-bold">
+        <button
+          type="submit"
+          class="btn bg-primary text-white contact_form_submit fw-bold"
+        >
           Submit
         </button>
       </form>

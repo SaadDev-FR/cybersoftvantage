@@ -15,6 +15,13 @@ export class PostJobAdvertService {
         alert(res);
       });
   }
+  applyForJob(data: any) {
+    this.http
+      .post('http://localhost:8000/api/applyJob', data)
+      .subscribe((res) => {
+        alert(res);
+      });
+  }
 
   getJobsAdvert(): Observable<any> {
     return this.http.get<any>('http://localhost:8000/api/GetJobsAdvert').pipe(

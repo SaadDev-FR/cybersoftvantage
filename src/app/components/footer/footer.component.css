@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+*{
+    
+  font-family: 'League Spartan', sans-serif;
+}
+* p{
+  font-family: 'Assistant', sans-serif;
+}
 .shopHeading
 {
     
@@ -67,11 +74,11 @@
 }
 }
 
-@media  (max-width: 1280px) {
+@media  (max-width: 767px) {
 	.footerBottom2
     {
         margin-top: -10px;
-        padding-left: 100px !important;
+        padding-left: 82px !important;
     }
    
   

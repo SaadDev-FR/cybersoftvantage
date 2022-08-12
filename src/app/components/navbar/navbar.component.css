@@ -5,6 +5,11 @@
     -webkit-box-shadow: var(--navbar-scroll-shadow);
     box-shadow: var(--navbar-scroll-shadow);
 } */
+.navbar 
+{
+    z-index: 100;
+    background-color: rgb(243, 232, 232) !important;
+}
 .logoImage
 {
     width: 50%;
