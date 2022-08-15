@@ -672,9 +672,6 @@ button.contact_form_submit {
 
 
 @media (max-width: 767px) {
-
-  
-
   .column {
     width: 100%;
     display: block;
@@ -767,7 +764,9 @@ button.contact_form_submit {
     /* margin-left: 30px !important; */
     margin-top: 30px !important;
   }
-
+  .CoreValuesRow {
+    margin-left: 0px !important;
+  }
   .serviceimage {
 
     margin-left: 45px;
