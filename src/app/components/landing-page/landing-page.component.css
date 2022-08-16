@@ -87,29 +87,26 @@ height: 50px;
 
 /*  carousel      */
 
-.carousel-item {
-    height: 100vh;
-    min-height: 300px;
-}
+
 .navbar
 {
     position: absolute;
     z-index: 100;
 }
 .bg-1 {
-    background-image: linear-gradient(rgb(33 33 32 / 70%), rgba(0, 0, 0, 0.1)),url(/assets/images/testImages/slider1.png);
+    background-image:  url(/assets/images/testImages/s1.png);
 }
 
 .bg-2 {
-    background-image:linear-gradient(rgb(33 33 32 / 70%), rgba(0, 0, 0, 0.1)), url(/assets/images/testImages/slider2.png);
+    background-image:  url(/assets/images/testImages/s2.png);
 }
 
 .bg-3 {
-    background-image:linear-gradient(rgb(33 33 32 / 70%), rgba(0, 0, 0, 0.1)), url(/assets/images/testImages/slider3.png);
+    background-image: url(/assets/images/testImages/sliderN3.png);
 }
 
 .bg-4 {
-    background-image:linear-gradient(rgb(33 33 32 / 70%), rgba(0, 0, 0, 0.6)), url(/assets/images/testImages/21.png);
+    background-image: url(/assets/images/testImages/4S.png);
 }
 
 .bg-1,
@@ -118,6 +115,7 @@ height: 50px;
     
     background-size: cover;
 }
+
 
 .carousel-caption {
     bottom: 550px;
@@ -317,6 +315,7 @@ margin-top: 39%;
 
     @media (max-width: 576px) {
 
+       
         .card1 {
             width: 75% !important;
         }
@@ -470,13 +469,35 @@ margin-top: 39%;
                 font-size: 15px !important;
                 line-height: 20px !important;
             }
-            .bg-4{
-                background-position: center;
-                background-size: cover;
+            .carousel-inner:before {
+                content: '';
+                position: absolute;
+                width: unset !important;
+                height: unset !important;
+                top: 0;
+                left: 0;
+                z-index: 1;
             }
         
-        
-         
+            .bg-1,
+            .bg-2,
+            .bg-3,.bg-4 {
+                
+                background-size: contain !important;
+                background-repeat: no-repeat !important;
+            }
+            .carousel-item {
+                width: 100% !important;
+                height: 200px !important;
+            }
+            .carousel-indicators {
+                bottom: 0px;
+            }
+            .skillsContainer
+            {
+                padding-left: 15% !important;
+                
+            }
     
     }
 
@@ -532,76 +553,7 @@ margin-top: 39%;
 
 
 
-@media (max-width: 767px) {
-    .navbar-nav {
-        text-align: center;
-    }
 
-    .navbar-collapse .nav-item .nav-link {
-        color: #000;
-    }
-
-    .carousel-caption {
-        bottom: 350px;
-    }
-
-    .carousel-caption h5 {
-        font-size: 25px;
-    }
-
-    .carousel-caption p {
-        font-size: 12px;
-        width: 100%;
-    }
-
-    .carousel-caption a {
-        padding: 10px 15px;
-        font-size: 15px;
-    }
-
-    .navbar-collapse {
-        background: #fff;
-    }
-
-    .carousel-indicators {
-        margin-bottom: 100px !important;
-    }
-
-    .bg-1,
-    .bg-2,
-    .bg-3 {
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .skillsContainer {
-        padding-left: 40px;
-
-    }
-
-    .imageCol {
-        margin-top: 20px !important;
-    }
-
-    .card1 {
-        width: 50%;
-    }
-
-    .skilsColumns {
-        margin-bottom: 50px !important;
-    }
-
-    .aboutSecCol {
-        width: 75% !important
-    }
-
-    .aboutRow {
-        margin-bottom: 20px !important;
-    }
-
-
-}
 
 /* @media (max-width: 576px) {
 
@@ -893,16 +845,7 @@ p,
 
 }
 
-/* about */
-.coverBg {
-    background-image: linear-gradient(rgba(199, 208, 17, 0.7), rgba(0, 0, 0, 0.7)), url("/assets//images//intro1.jpg");
-    min-height: 500px;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 
 
 

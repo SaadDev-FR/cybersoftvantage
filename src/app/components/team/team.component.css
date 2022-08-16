@@ -7,7 +7,7 @@
 }
 
 .bg-cover {
-	background-image: linear-gradient(rgba(203, 201, 201, 0.7), rgba(56, 57, 52, 0.7)),url(/assets/images/team.jpg);
+	background-image: linear-gradient(rgb(33 33 32 / 70%), rgba(0, 0, 0, 0.7)),url(/assets/images/team.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;

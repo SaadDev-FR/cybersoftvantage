@@ -6,7 +6,7 @@ import * as AOS from 'aos';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
-  LogoImageSrc: any = '../../../assets/images/TransparentLogo1.png';
+  LogoImageSrc: any = '../../../assets/images/testImages/mainLogo.png';
   constructor() {}
 
   ngOnInit(): void {

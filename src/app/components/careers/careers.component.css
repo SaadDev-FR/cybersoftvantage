@@ -26,8 +26,8 @@
     margin-top: 70px ;
   }
   .limitTextHeight {
-    height: 32%;
-    overflow: hidden;
+    height: 32px;
+    overflow: hidden !important;
   
 }
 @media  (max-width: 576px) {

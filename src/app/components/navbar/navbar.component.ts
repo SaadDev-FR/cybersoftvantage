@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  LogoImageSrc: any = '../../../assets/images/TransparentLogo1.png';
+  LogoImageSrc: any = '../../../assets/images/testImages/mainLogo.png';
 
   constructor(private router: Router) {}
 

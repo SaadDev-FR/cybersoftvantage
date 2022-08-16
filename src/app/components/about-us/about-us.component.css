@@ -1,13 +1,14 @@
 .bg-cover {
-  background-image: linear-gradient(rgba(199, 208, 17, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/aboutcomp.png);
-  background-position: center;
+  background-image:  url(/assets/images/testImages/one.png);
+  background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  
 }
 
 .bg-cover2 {
-  background-image: linear-gradient(rgba(199, 208, 17, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/cv.jpg);
+  background-image: linear-gradient(rgb(33 33 32 / 70%), rgba(0, 0, 0, 0.7)), url(/assets/images/cv.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,13 +18,14 @@
 
 .aboutHeading {
   font-weight: 800;
+ 
 }
 
 .divider {
   height: 4px;
   width: 100px;
   background: linear-gradient(to top, #ffffff, #ffffff);
-  margin: 16px auto;
+  margin: 2px auto;
   margin-top: -14px !important;
 }
 
@@ -107,7 +109,7 @@ body {
 .container .box .body .content div {
   transform-style: preserve-3d;
   padding: 20px;
-  background: #081b64;
+  background: #021b3e;
   transform: translateZ(100px);
   border-radius: 30px !important;
 
@@ -154,7 +156,7 @@ img {
 }
 
 .whyChooseUsHeading {
-  margin-left: 50px !important;
+  align-items: center !important;
 }
 
 .chooseUsHeading {
@@ -206,15 +208,16 @@ body {
   display: table;
   clear: both;
 }
+
 .carousel-indicators {
   position: absolute;
   right: 0;
   bottom: -55px;
 }
-.logoImage
-{
-    width: 50%;
-    height: 50%;
+
+.logoImage {
+  width: 50%;
+  height: 50%;
 }
 
 /* Responsive columns */
@@ -327,7 +330,7 @@ body {
 }
 
 .missionVisionContaner {
-  background-image: linear-gradient(rgb(54, 51, 51), rgb(247, 247, 242), rgb(54, 51, 51));
+  background-color: white;
 }
 
 
@@ -537,7 +540,7 @@ body {
 }
 
 .contact_inner {
-  
+
   background-color: #fff;
   position: relative;
   box-shadow: 20px 22px 44px #cccc;
@@ -545,7 +548,7 @@ body {
 }
 
 .contact_field {
- text-align: center;
+  text-align: center;
   padding: 60px 340px 90px 100px;
 }
 
@@ -681,13 +684,14 @@ button.contact_form_submit {
   .container {
     width: 100%;
     margin-left: 15px;
-}
+  }
 
   .missionVisionHeading {
     margin-left: -11px;
   }
+
   .contact_field h3 {
-   
+
     padding: 12px 12px 12px 12px !important;
 
   }
@@ -701,7 +705,7 @@ button.contact_form_submit {
     width: 75% !important;
     margin-left: 130px !important;
     margin-top: -100px !important;
-    
+
   }
 
 
@@ -716,24 +720,25 @@ button.contact_form_submit {
     margin-left: 71px;
     margin-bottom: 13px;
   }
+
   .contact_info_sec {
     width: 276px;
     margin-top: -20px;
 
 
   }
- 
+
 
   .contact_field {
     padding: 0px 0px 0px 0px !important;
-  
+
   }
+
   .CoreValuesRow {
     margin-left: 15px !important;
   }
 
-  .why-choose-center-image
-  {
+  .why-choose-center-image {
     margin-left: 40px !important;
   }
 }
@@ -746,10 +751,11 @@ button.contact_form_submit {
     max-width: 1200px;
 
   }
+
   .container {
     width: unset !important;
     margin: 0px auto;
-}
+  }
 
   .coreValues .card {
     position: relative;
@@ -764,9 +770,11 @@ button.contact_form_submit {
     /* margin-left: 30px !important; */
     margin-top: 30px !important;
   }
+
   .CoreValuesRow {
     margin-left: 0px !important;
   }
+
   .serviceimage {
 
     margin-left: 45px;
@@ -794,7 +802,7 @@ button.contact_form_submit {
   }
 
   .contact_field h3 {
-   
+
     padding: 12px 12px 12px 12px !important;
 
   }
@@ -840,7 +848,7 @@ button.contact_form_submit {
   }
 
   .contactUSRow {
-    margin-top: -100px ;
+    margin-top: -100px;
     margin-left: 15px !important;
   }
 

@@ -12,93 +12,63 @@ export class ServicesComponentComponent implements OnInit {
   services: any = [
     {
       heading1: 'Web Designing',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
+      btn1: 'See More',
+      imageUrl: '../../../assets/images/testImages/wd.png',
     },
     {
       heading1: 'Web Develepment',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
+      btn1: 'See More',
+      imageUrl: '../../../assets/images/testImages/wdev.png',
     },
     {
-      heading1: 'App Development ',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
+      heading1: 'App Development & Support',
+      btn1: 'See More',
+      imageUrl: '/assets/images/testImages/appDev.png',
     },
     {
       heading1: 'Business Analysis',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
-    },
-    {
-      heading1: 'Android & IOS',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
+      btn1: 'See More',
+      imageUrl: '/assets/images/testImages/ba.png',
     },
     {
       heading1: 'Content Management',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
+      btn1: 'See More',
+      imageUrl: '/assets/images/testImages/contentM.png',
     },
     {
       heading1: 'Database Design & maintenance',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
-    },
-    {
-      heading1: 'E-Government & Web Applications',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
+      btn1: 'See More',
+      imageUrl: '/assets/images/testImages/db.png',
     },
     {
       heading1: 'Project Management',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
+      btn1: 'See More',
+      imageUrl: '/assets/images/testImages/pm.png',
     },
     {
       heading1: 'Software Installation & Implementation',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
+      btn1: 'See More',
+      imageUrl: '/assets/images/testImages/67.png',
     },
     {
-      heading1: 'SQA & Testing',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
+      heading1: 'Software Quality Assurance & Testing',
+      btn1: 'See More',
+      imageUrl: '/assets/images/testImages/70.png',
     },
     {
       heading1: 'Media projects',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
+      btn1: 'See More',
+      imageUrl: '/assets/images/testImages/mp.png',
     },
     {
       heading1: 'IT Solutions and consulting services',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
+      btn1: 'See More',
+      imageUrl: '/assets/images/testImages/consultancy.png',
     },
     {
       heading1: 'UI/UX',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
-    },
-    {
-      heading1: 'Digital marketing',
-      imageUrl: '/assets/images/testImages/testSkills.png',
-      paragraph:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, amet.',
+      btn1: 'See More',
+      imageUrl: '/assets/images/testImages/uiUx.png',
     },
   ];
 

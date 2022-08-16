@@ -1,9 +1,9 @@
 .bg-cover {
-  background-image: linear-gradient(rgba(199, 208, 17, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/services.jpg);
-  background-position: center;
+  background-image: url(/assets/images/testImages/serv.png);
+  background-position: end;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+
  
 }
 

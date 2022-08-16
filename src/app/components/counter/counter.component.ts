@@ -30,7 +30,7 @@ export class CounterComponent implements OnInit {
 
   accuratecountstop: any = setInterval(() => {
     this.accuratecount++;
-    if (this.accuratecount == 92) {
+    if (this.accuratecount == 90) {
       clearInterval(this.accuratecountstop);
     }
   }, 10);
