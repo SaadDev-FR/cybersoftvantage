@@ -1,1 +1,34 @@
-<p>admin-login-panel works!</p>
+<section class="container-fluid bg-cover">
+  <div class="container pt-5 pb-5">
+    <div class="border w-50 p-3 bg-white">
+      <h1 class="text-center">Apply for Internship</h1>
+      <form class="border p-5" [formGroup]="adminForm">
+        <label for="email" class="fw-bold">Email</label>
+        <input
+          type="email"
+          formControlName="email"
+          name="Email"
+          class="form-control w-50 form-group"
+          placeholder="name21@gmail.com"
+          required
+        />
+        <label for="password" class="fw-bold">Password</label>
+        <textarea
+          name="password"
+          formControlName="password"
+          class="form-control w-50 form-group"
+          placeholder="password"
+          required
+        ></textarea>
+        <br />
+        <button
+          type="submit"
+          class="btn bg-primary text-white contact_form_submit fw-bold"
+          (click)="login()"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

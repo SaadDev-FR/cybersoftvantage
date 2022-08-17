@@ -14,6 +14,8 @@ import { ProjectManagementComponent } from './components/project-management/proj
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminLoginPanelComponent } from './components/Admin/admin-login-panel/admin-login-panel.component';
+import { AdminAuthGuardGuard } from './components/Admin/adminGuard/admin-auth-guard.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing-page', pathMatch: 'full' },
@@ -25,11 +27,17 @@ const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'services-component', component: ServicesComponentComponent },
   { path: 'careers', component: CareersComponent },
-  { path: 'admin-home', component: AdminHomeComponent },
+  {
+    path: 'admin-home',
+    component: AdminHomeComponent,
+    canActivate: [AdminAuthGuardGuard],
+  },
   { path: 'jobs-form', component: JobsFormComponent },
   { path: 'intern-advert', component: InternAdvertComponent },
   { path: 'jobs-advert', component: JobsAdvertComponent },
   { path: 'intern-form', component: InternFormComponent },
+  { path: 'admin-login-panel', component: AdminLoginPanelComponent },
+  { path: 'admin-login-panel', component: AdminHomeComponent },
 ];
 
 @NgModule({

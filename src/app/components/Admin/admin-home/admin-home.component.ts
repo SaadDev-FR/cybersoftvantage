@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { PostInternPostService } from './../../../shared/internService/post-intern-post.service';
 import { PostJobAdvertService } from './../../../shared/jobService/post-job-advert.service';
 import { TeamServiceService } from './../../../shared/teamService/team-service.service';
@@ -16,7 +17,8 @@ export class AdminHomeComponent implements OnInit {
     private postJobServ: PostJobAdvertService,
     private interServ: PostInternPostService,
     private teamServ: TeamServiceService,
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) {}
   ngOnInit(): void {}
 
@@ -123,5 +125,11 @@ export class AdminHomeComponent implements OnInit {
     this.teamServ.postTeam(formData3);
     this.myFiles3 = [];
     this.TeamForm.reset();
+  }
+
+  logoutUser() {
+    localStorage.removeItem('token');
+    this.router.navigate(['admin-login-panel']);
+    return true;
   }
 }

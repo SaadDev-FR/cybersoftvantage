@@ -87,7 +87,11 @@ height: 50px;
 
 /*  carousel      */
 
-
+.itemHeight
+{
+    width: 100% !important;
+    height: 750px !important;
+}
 .navbar
 {
     position: absolute;
@@ -160,7 +164,7 @@ height: 50px;
 
 
 .carousel-indicators {
-    bottom: 50px;
+    bottom: 30px;
 }
 .carousel-indicators button {
     width: 100px !important;

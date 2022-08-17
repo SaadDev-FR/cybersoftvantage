@@ -21,6 +21,7 @@
     "@types/aos": "^3.0.4",
     "@types/jquery": "^3.5.14",
     "aos": "^2.3.4",
+    "auth-guard": "^1.0.12",
     "jquery": "^3.6.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
