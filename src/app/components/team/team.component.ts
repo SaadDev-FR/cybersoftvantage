@@ -27,7 +27,7 @@ export class TeamComponent implements OnInit {
   ngOnInit(): void {
     this.teamServ.getTeam().subscribe((res) => {
       this.teamArray = res;
-      for (let i = 0; i < this.teamArray.length; i++) {
+      for (let i = 0; i <= this.teamArray.length; i++) {
         this.teamArray[i].url =
           'http://localhost:8000/' + this.teamArray[i].files[0].filePath;
       }
