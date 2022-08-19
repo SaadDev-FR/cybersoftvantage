@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ProjectManagementComponent } from './components/project-management/project-management.component';
-import { LandingServiceSectionComponent } from './components/landing-service-section/landing-service-section.component';
+
 import { CoreValuesComponent } from './components/core-values/core-values.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { TeamComponent } from './components/team/team.component';
@@ -31,7 +31,6 @@ import { InternAdvertComponent } from './components/intern-advert/intern-advert.
     NavbarComponent,
     LandingPageComponent,
     ProjectManagementComponent,
-    LandingServiceSectionComponent,
     CoreValuesComponent,
     CounterComponent,
     TeamComponent,

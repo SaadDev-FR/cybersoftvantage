@@ -1,5 +1,11 @@
 
-
+*{
+    
+  font-family: 'League Spartan', sans-serif;
+}
+* p{
+  font-family: 'Assistant', sans-serif;
+}
 
 .coreValues {
  
@@ -119,6 +125,7 @@
   background: #fff;
   color: #000;
 }
+ 
 
 
 @media (max-width: 576px) {

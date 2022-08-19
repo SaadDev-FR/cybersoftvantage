@@ -1,3 +1,10 @@
 table, th, td {
     border:1px solid black;
   }
+  *{
+    
+    font-family: 'League Spartan', sans-serif;
+  }
+  * p{
+    font-family: 'Assistant', sans-serif;
+  }

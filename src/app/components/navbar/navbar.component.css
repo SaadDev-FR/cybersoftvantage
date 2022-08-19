@@ -5,6 +5,13 @@
     -webkit-box-shadow: var(--navbar-scroll-shadow);
     box-shadow: var(--navbar-scroll-shadow);
 } */
+*{
+    
+    font-family: 'League Spartan', sans-serif;
+  }
+  * p{
+    font-family: 'Assistant', sans-serif;
+  }
 .navbar 
 {
     z-index: 100;

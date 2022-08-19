@@ -1,3 +1,17 @@
+*{
+    
+  font-family: 'League Spartan', sans-serif;
+}
+* p{
+  font-family: 'Assistant', sans-serif;
+}
+.Teamcolumns
+{
+  border-radius: 15px !important;
+}
+.ad-banner {
+  width: 400px;
+}
 .teamCols
 {
     height: 350px !important;

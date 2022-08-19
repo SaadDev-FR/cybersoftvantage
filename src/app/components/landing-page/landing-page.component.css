@@ -601,16 +601,7 @@ margin-top: 39%;
 } */
 
 
-.coverBg {
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(78, 74, 74, 0.8)), url("https://bit.ly/2rlzaXi");
-    min-height: 500px;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 
-}
 
 .parrentDiv {
     flex-wrap: wrap;
@@ -929,6 +920,7 @@ img {
     color: honeydew;
 }
 
+
 /* career */
 .careerImage {
     width: 100%;
@@ -995,4 +987,7 @@ img {
 .cta:hover .hover-underline-animation:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+.card1:hover{
+    transform: scale(0.9);
 }

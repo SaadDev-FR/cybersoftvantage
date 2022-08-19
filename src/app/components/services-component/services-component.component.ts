@@ -13,62 +13,63 @@ export class ServicesComponentComponent implements OnInit {
     {
       heading1: 'Web Designing',
       btn1: 'See More',
-      imageUrl: '../../../assets/images/testImages/wd.png',
+      imageUrl: '../../../assets/images/testImages/serviceImages/servWD.png',
     },
     {
       heading1: 'Web Develepment',
       btn1: 'See More',
-      imageUrl: '../../../assets/images/testImages/wdev.png',
+      imageUrl: '../../../assets/images/testImages/serviceImages/servDev.png',
     },
     {
       heading1: 'App Development & Support',
       btn1: 'See More',
-      imageUrl: '/assets/images/testImages/appDev.png',
+      imageUrl: '/assets/images/testImages/serviceImages/servAD.png',
     },
     {
       heading1: 'Business Analysis',
       btn1: 'See More',
-      imageUrl: '/assets/images/testImages/ba.png',
+      imageUrl: '/assets/images/testImages/serviceImages/bAnalysis.png',
     },
     {
       heading1: 'Content Management',
       btn1: 'See More',
-      imageUrl: '/assets/images/testImages/contentM.png',
+      imageUrl: '/assets/images/testImages/serviceImages/cms.png',
     },
     {
       heading1: 'Database Design & maintenance',
       btn1: 'See More',
-      imageUrl: '/assets/images/testImages/db.png',
+      imageUrl: '/assets/images/testImages/serviceImages/servDb.png',
     },
     {
       heading1: 'Project Management',
       btn1: 'See More',
-      imageUrl: '/assets/images/testImages/pm.png',
+      imageUrl: '/assets/images/testImages/serviceImages/servPM.png',
     },
     {
       heading1: 'Software Installation & Implementation',
       btn1: 'See More',
-      imageUrl: '/assets/images/testImages/67.png',
+      imageUrl:
+        '/assets/images/testImages/serviceImages/servImplementation.png',
     },
     {
       heading1: 'Software Quality Assurance & Testing',
       btn1: 'See More',
-      imageUrl: '/assets/images/testImages/70.png',
+      imageUrl: '/assets/images/testImages/serviceImages/servQA.png',
     },
     {
-      heading1: 'Media projects',
+      heading1: 'Game Develpment',
       btn1: 'See More',
-      imageUrl: '/assets/images/testImages/mp.png',
+      imageUrl: '/assets/images/testImages/serviceImages/servGame.png',
     },
     {
       heading1: 'IT Solutions and consulting services',
       btn1: 'See More',
-      imageUrl: '/assets/images/testImages/consultancy.png',
+      imageUrl: '/assets/images/testImages/serviceImages/servITSolutions.png',
     },
     {
       heading1: 'UI/UX',
       btn1: 'See More',
-      imageUrl: '/assets/images/testImages/uiUx.png',
+      imageUrl: '/assets/images/testImages/serviceImages/servUI.png',
     },
   ];
 

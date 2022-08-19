@@ -1,3 +1,14 @@
+*{
+    
+  font-family: 'League Spartan', sans-serif;
+}
+* p{
+  font-family: 'Assistant', sans-serif;
+}
 table, th, td {
     border:1px solid black;
+  }
+  .jobAdvertAd
+  {
+    align-items: center !important;
   }

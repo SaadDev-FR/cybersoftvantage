@@ -61,9 +61,9 @@ export class LandingPageComponent implements OnInit {
       imageUrl: '/assets/images/testImages/70.png',
     },
     {
-      heading1: 'Media projects',
+      heading1: 'Game Develpment',
       btn1: 'See More',
-      imageUrl: '/assets/images/testImages/mp.png',
+      imageUrl: '/assets/images/testImages/gameDev.png',
     },
     {
       heading1: 'IT Solutions and consulting services',
@@ -93,5 +93,8 @@ export class LandingPageComponent implements OnInit {
       this.showbtn = false;
       window.scrollTo(0, 700);
     }
+  }
+  goToAbout() {
+    this.router.navigate(['about-us']);
   }
 }

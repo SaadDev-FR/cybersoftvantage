@@ -1,5 +1,12 @@
+*{
+    
+    font-family: 'League Spartan', sans-serif;
+  }
+  * p{
+    font-family: 'Assistant', sans-serif;
+  }
 .bg-cover {
-    background-image: linear-gradient(rgba(199, 208, 17, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/jobApplic.png);
+    background-image: linear-gradient(rgb(33 33 32 / 70%), rgba(0, 0, 0, 0.9)), url(/assets/images/jobApplic.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

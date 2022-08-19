@@ -43,4 +43,7 @@ export class NavbarComponent implements OnInit {
   navigateToAdmin() {
     this.router.navigate(['admin-home']);
   }
+  goToContactUS() {
+    this.router.navigate(['contact-us']);
+  }
 }

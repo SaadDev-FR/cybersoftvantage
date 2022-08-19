@@ -1,9 +1,16 @@
+*{
+    
+  font-family: 'League Spartan', sans-serif;
+}
+* p{
+  font-family: 'Assistant', sans-serif;
+}
 .bg-cover {
-  background-image: url(/assets/images/testImages/serv.png);
+  background-image: url(/assets/images/testImages/servMain.png);
   background-position: end;
   background-repeat: no-repeat;
   background-size: cover;
-
+  background-attachment: fixed  ;
  
 }
 

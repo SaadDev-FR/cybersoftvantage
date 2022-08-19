@@ -20,13 +20,20 @@
   font-weight: 800;
  
 }
-
 .divider {
   height: 4px;
   width: 100px;
   background: linear-gradient(to top, #ffffff, #ffffff);
   margin: 2px auto;
-  margin-top: -14px !important;
+  margin-top: -19px !important;
+}
+.aboutDivider
+{
+  height: 4px;
+  width: 100px;
+  background: linear-gradient(to top, #ffffff, #ffffff);
+  margin: 2px auto;
+  margin-top: -45px !important;
 }
 
 /* *************mission-vision section************** */

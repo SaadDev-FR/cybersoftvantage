@@ -1,5 +1,12 @@
+*{
+    
+  font-family: 'League Spartan', sans-serif;
+}
+* p{
+  font-family: 'Assistant', sans-serif;
+}
 .bg-cover {
-    background-image: linear-gradient(rgba(199, 208, 17, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/images/career-steps.jpg);
+    background-image: url(/assets/images/testImages/aboutUS.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,16 +28,17 @@
   {
     margin-top: 200px ;
   }
-  .imageCol2
-  {
-    margin-top: 70px ;
-  }
+  
   .limitTextHeight {
     height: 32px;
     overflow: hidden !important;
   
 }
 @media  (max-width: 576px) {
+  .aboutSecCol
+  {
+    Margin-top: 50px !important ;
+  }
 .secondColumn
 {
   width: 100% !important;
@@ -57,17 +65,13 @@
  width: unset !important;
 }
 .limitTextHeight {
-  height: unset !important;
-  overflow: hidden;
+  height: 32px;
+  overflow: hidden !important;
 
 }
+
 }
 @media  (max-width: 767px) {
-  .careerHeading{
-    background-color: #ffc107;
-    border-radius: 20px;
-    width: 30% !important;
-  }
   .firstColumn
 {
  width: 100% !important;

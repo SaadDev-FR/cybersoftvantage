@@ -2,6 +2,8 @@
 <section>
   <div
     class="carousel slide sliderMain"
+    data-aos="zoom-in"
+    data-aos-duration="1500"
     data-bs-ride="carousel"
     id="carouselExampleCaptions"
   >
@@ -121,10 +123,10 @@
           in the international market and revolutionize IT industry
         </p>
         <a
-          href="#"
+          (click)="goToAbout()"
           data-aos="fade-up"
           data-aos-duration="1500"
-          class="btn btn-main"
+          class="btn btn-main aboutBtn"
           >Read More</a
         >
       </div>
