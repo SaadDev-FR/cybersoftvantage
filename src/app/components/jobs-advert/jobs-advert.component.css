@@ -1,3 +1,4 @@
+
 *{
     
   font-family: 'League Spartan', sans-serif;
@@ -12,3 +13,21 @@ table, th, td {
   {
     align-items: center !important;
   }
+  .hr
+  {
+     width: 50%;
+  }
+  .limitTextHeight {
+    height: 0px;
+    overflow: hidden !important;
+  
+}
+.jobDesc:hover {
+  width: 40%;
+  border-bottom: 3px solid rgb(190, 201, 30);
+}
+.jobDesc2:hover {
+  width: 100%;
+  border-bottom: 3px solid rgb(190, 201, 30);
+}
+ 

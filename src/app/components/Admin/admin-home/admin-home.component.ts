@@ -26,10 +26,20 @@ export class AdminHomeComponent implements OnInit {
   myFiles: any[] = [];
   myForm = new FormGroup({
     jobTitle: new FormControl('', Validators.required),
+    industry: new FormControl('', Validators.required),
+    functionalArea: new FormControl('', Validators.required),
+    totalPositions: new FormControl('', Validators.required),
+    jobShift: new FormControl('', Validators.required),
     jobType: new FormControl('', Validators.required),
-    expertise: new FormControl('', Validators.required),
+    jobLocation: new FormControl('', Validators.required),
+    gender: new FormControl('', Validators.required),
+    minimumEducation: new FormControl('', Validators.required),
+    careerLevel: new FormControl('', Validators.required),
+    minimumExpertise: new FormControl('', Validators.required),
+    applyBefore: new FormControl('', Validators.required),
+    postingDate: new FormControl('', Validators.required),
     jobDesc: new FormControl('', Validators.required),
-    deadline: new FormControl('', Validators.required),
+    extraKnowledge: new FormControl('', Validators.required),
     file: new FormControl('', Validators.required),
   });
 
@@ -46,10 +56,20 @@ export class AdminHomeComponent implements OnInit {
   submit() {
     let formData = new FormData();
     formData.append('jobTitle', this.myForm.value.jobTitle);
+    formData.append('industry', this.myForm.value.industry);
+    formData.append('functionalArea', this.myForm.value.functionalArea);
+    formData.append('totalPositions', this.myForm.value.totalPositions);
+    formData.append('jobShift', this.myForm.value.jobShift);
     formData.append('jobType', this.myForm.value.jobType);
-    formData.append('expertise', this.myForm.value.expertise);
+    formData.append('jobLocation', this.myForm.value.jobLocation);
+    formData.append('gender', this.myForm.value.gender);
+    formData.append('minimumEducation', this.myForm.value.minimumEducation);
+    formData.append('careerLevel', this.myForm.value.careerLevel);
+    formData.append('minimumExpertise', this.myForm.value.minimumExpertise);
+    formData.append('applyBefore', this.myForm.value.applyBefore);
+    formData.append('postingDate', this.myForm.value.postingDate);
     formData.append('jobDesc', this.myForm.value.jobDesc);
-    formData.append('deadline', this.myForm.value.deadline);
+    formData.append('extraKnowledge', this.myForm.value.extraKnowledge);
     for (var i = 0; i < this.myFiles.length; i++) {
       formData.append('files', this.myFiles[i]);
     }
@@ -66,10 +86,20 @@ export class AdminHomeComponent implements OnInit {
 
   internForm = new FormGroup({
     jobTitle: new FormControl('', Validators.required),
+    industry: new FormControl('', Validators.required),
+    functionalArea: new FormControl('', Validators.required),
+    totalPositions: new FormControl('', Validators.required),
+    jobShift: new FormControl('', Validators.required),
     jobType: new FormControl('', Validators.required),
-    expertise: new FormControl('', Validators.required),
+    jobLocation: new FormControl('', Validators.required),
+    gender: new FormControl('', Validators.required),
+    minimumEducation: new FormControl('', Validators.required),
+    careerLevel: new FormControl('', Validators.required),
+    minimumExpertise: new FormControl('', Validators.required),
+    applyBefore: new FormControl('', Validators.required),
+    postingDate: new FormControl('', Validators.required),
     jobDesc: new FormControl('', Validators.required),
-    deadline: new FormControl('', Validators.required),
+    extraKnowledge: new FormControl('', Validators.required),
     file: new FormControl('', Validators.required),
   });
 
@@ -83,12 +113,28 @@ export class AdminHomeComponent implements OnInit {
   submitIntern() {
     let formData2 = new FormData();
     formData2.append('jobTitle', this.internForm.value.jobTitle);
+    formData2.append('industry', this.internForm.value.industry);
+    formData2.append('functionalArea', this.internForm.value.functionalArea);
+    formData2.append('totalPositions', this.internForm.value.totalPositions);
+    formData2.append('jobShift', this.internForm.value.jobShift);
     formData2.append('jobType', this.internForm.value.jobType);
-    formData2.append('expertise', this.internForm.value.expertise);
+    formData2.append('jobLocation', this.internForm.value.jobLocation);
+    formData2.append('gender', this.internForm.value.gender);
+    formData2.append(
+      'minimumEducation',
+      this.internForm.value.minimumEducation
+    );
+    formData2.append('careerLevel', this.internForm.value.careerLevel);
+    formData2.append(
+      'minimumExpertise',
+      this.internForm.value.minimumExpertise
+    );
+    formData2.append('applyBefore', this.internForm.value.applyBefore);
+    formData2.append('postingDate', this.internForm.value.postingDate);
     formData2.append('jobDesc', this.internForm.value.jobDesc);
-    formData2.append('deadline', this.internForm.value.deadline);
-    for (var i = 0; i < this.myFiles2.length; i++) {
-      formData2.append('files', this.myFiles2[i]);
+    formData2.append('extraKnowledge', this.internForm.value.extraKnowledge);
+    for (var i = 0; i < this.myFiles.length; i++) {
+      formData2.append('files', this.myFiles[i]);
     }
 
     this.interServ.postInternPosition(formData2);
@@ -113,6 +159,7 @@ export class AdminHomeComponent implements OnInit {
       // if(mimetype=="image/jpg" || mimetype=="image/jpeg" || mimetype== "image/png" || mimetype=="video/mp4")
       this.myFiles3.push(event.target.files[i]);
     }
+    console.log('test::', this.TeamForm.value);
   }
   submitTeam() {
     let formData3 = new FormData();

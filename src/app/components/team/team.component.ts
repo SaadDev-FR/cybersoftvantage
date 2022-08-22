@@ -20,6 +20,7 @@ export class TeamComponent implements OnInit {
             'http://localhost:8000/' +
               this.teamMembers[i]?.files[0]?.filePath || '';
         }
+        console.log('image is', this.teamMembers);
       }
       for (let i = 0; i <= this.teamMembers.length; i++) {
         let tempMembers = [...this.teamMembers];

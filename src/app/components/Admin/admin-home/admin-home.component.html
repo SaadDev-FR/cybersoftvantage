@@ -11,6 +11,38 @@
       type="text"
       class="form-control w-50"
     />
+    <label for="industry">Industry</label>
+    <input
+      required
+      formControlName="industry"
+      id="industry"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="functionalArea">Functional Area</label>
+    <input
+      required
+      formControlName="functionalArea"
+      id="functionalArea"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="totalPositions">Total Positions</label>
+    <input
+      required
+      formControlName="totalPositions"
+      id="totalPositions"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="jobShift">Job Shift</label>
+    <input
+      required
+      formControlName="jobShift"
+      id="jobShift"
+      type="text"
+      class="form-control w-50"
+    />
     <label for="jobType">Job Type</label>
     <input
       formControlName="jobType"
@@ -18,21 +50,57 @@
       type="text"
       class="form-control w-50"
     />
-    <label for="expertise">Expertise & Requirements</label>
+    <label for="jobLocation">Job Location</label>
+    <input
+      formControlName="jobLocation"
+      id="jobLocation"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="gender">Gender</label>
+    <input
+      formControlName="gender"
+      id="gender"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="minimumEducation">Minimum Education</label>
+    <input
+      formControlName="minimumEducation"
+      id="minimumEducation"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="careerLevel">Career Level</label>
+    <input
+      formControlName="careerLevel"
+      id="careerLevel"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="  minimumExpertise">Expertise</label>
+    <input
+      formControlName="  minimumExpertise"
+      id="  minimumExpertise"
+      type="text"
+      class="form-control w-50"
+    />
+
+    <label for="applyBefore">Apply Before</label>
     <textarea
-      formControlName="expertise"
-      id="expertise"
+      formControlName="applyBefore"
+      id="applyBefore"
       type="text"
       class="form-control w-50"
     >
     </textarea>
-    <label for="deadline">Deadline</label>
-    <input
-      formControlName="deadline"
-      id="deadline"
+    <label for="postingDate">Posting Date</label>
+    <textarea
+      formControlName="postingDate"
+      id="postingDate"
       type="text"
       class="form-control w-50"
-    />
+    ></textarea>
     <label for="jobDesc">Job Description</label>
     <textarea
       formControlName="jobDesc"
@@ -41,6 +109,13 @@
       class="form-control w-50"
     >
     </textarea>
+    <label for="extraKnowledge">Extra knowledge</label>
+    <textarea
+      formControlName="extraKnowledge"
+      id="extraKnowledge"
+      type="text"
+      class="form-control w-50"
+    ></textarea>
   </div>
   <div class="form-group">
     <label for="file">Uplod advert</label>
@@ -60,50 +135,126 @@
   <hr class="text-primary" />
 </form>
 <!-- internPositionPost -->
+
 <form class="mx-5 mt-5" [formGroup]="internForm" (ngSubmit)="submitIntern()">
-  <h1 class="mx-5">Upload Intern Positions</h1>
+  <h1 class="mx-5">Upload Internship Positions</h1>
   <div class="form-group">
-    <label for="jobTitle">Internship Title</label>
+    <label for="jobTitle">Job Title</label>
     <input
       required
       formControlName="jobTitle"
-      id="name"
+      id="jobTitle"
       type="text"
       class="form-control w-50"
     />
-    <label for="jobType">Internship Type</label>
+    <label for="industry">Industry</label>
+    <input
+      required
+      formControlName="industry"
+      id="industry"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="functionalArea">Functional Area</label>
+    <input
+      required
+      formControlName="functionalArea"
+      id="functionalArea"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="totalPositions">Total Positions</label>
+    <input
+      required
+      formControlName="totalPositions"
+      id="totalPositions"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="jobShift">Job Shift</label>
+    <input
+      required
+      formControlName="jobShift"
+      id="jobShift"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="jobType">Job Type</label>
     <input
       formControlName="jobType"
-      id="detail"
+      id="jobType"
       type="text"
       class="form-control w-50"
     />
-    <label for="expertise">Expertise & Requirements</label>
+    <label for="jobLocation">Job Location</label>
+    <input
+      formControlName="jobLocation"
+      id="jobLocation"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="gender">Gender</label>
+    <input
+      formControlName="gender"
+      id="gender"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="minimumEducation">Minimum Education</label>
+    <input
+      formControlName="minimumEducation"
+      id="minimumEducation"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="careerLevel">Career Level</label>
+    <input
+      formControlName="careerLevel"
+      id="careerLevel"
+      type="text"
+      class="form-control w-50"
+    />
+    <label for="  minimumExpertise">Expertise</label>
+    <input
+      formControlName="  minimumExpertise"
+      id="  minimumExpertise"
+      type="text"
+      class="form-control w-50"
+    />
+
+    <label for="applyBefore">Apply Before</label>
     <textarea
-      formControlName="expertise"
-      id="detail"
+      formControlName="applyBefore"
+      id="applyBefore"
       type="text"
       class="form-control w-50"
     >
     </textarea>
-    <label for="jobDesc">Internship Description</label>
+    <label for="postingDate">Posting Date</label>
+    <textarea
+      formControlName="postingDate"
+      id="postingDate"
+      type="text"
+      class="form-control w-50"
+    ></textarea>
+    <label for="jobDesc">Job Description</label>
     <textarea
       formControlName="jobDesc"
-      id="detail"
+      id="jobDesc"
       type="text"
       class="form-control w-50"
     >
     </textarea>
-    <label for="deadline">Deadline</label>
-    <input
-      formControlName="deadline"
-      id="detail"
+    <label for="extraKnowledge">Extra knowledge</label>
+    <textarea
+      formControlName="extraKnowledge"
+      id="extraKnowledge"
       type="text"
       class="form-control w-50"
-    />
+    ></textarea>
   </div>
   <div class="form-group">
-    <label for="file">Upload advert</label>
+    <label for="file">Uplod advert</label>
     <input
       formControlName="file"
       id="file"

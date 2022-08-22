@@ -1,35 +1,262 @@
-<div class="container border mb-4 mt-4" *ngFor="let job of JobsAdvertArray">
-  <div>
-    <table class="p-5">
-      <tr class="border">
-        <th class="p-2">Job Title</th>
-        <th class="p-2">Job Type</th>
-        <th class="p-2">Expertise</th>
-        <th class="p-2">Job Description</th>
-        <th class="p-2">Job Deadline</th>
-        <th class="p-2">Advertisement</th>
-      </tr>
-      <tr class="border">
-        <td class="p-2">{{ job.jobTitle }}</td>
-        <td class="p-2">
-          {{ job.jobType }}
-        </td>
-        <td class="p-2">
-          {{ job.expertise }}
-        </td>
-        <td class="p-2">{{ job.jobDesc }}</td>
-        <td class="p-2">
-          {{ job.deadline }}
-        </td>
-        <td class="p-2">
-          <img class="w-50 jobAdvertAd" src="{{ job.url }}" />
-        </td>
-      </tr>
-      <tr>
-        <td class="p-2 bg-warning">
-          <button class="bg-white fw-bold" (click)="moveToJobs()">Apply</button>
-        </td>
-      </tr>
-    </table>
+<div class="container mb-4 mt-4">
+  <div class="container">
+    <h1 class="fs-5">Latest jobs({{ jobsLength }})</h1>
+    <section class="mt-5">
+      <ng-container *ngFor="let job of JobsAdvertArray">
+        <div class="row">
+          <div class="col-lg-4">
+            <p class="fs-3">{{ job.jobTitle }}</p>
+            <div
+              class="fs-4"
+              [ngClass]="{ limitTextHeight: isReadMore }"
+              data-aos="fade-up"
+            >
+              <h1 class="fs-5 fw-bold">Job Details</h1>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1 class="fw-bold fs-5">Company:</h1>
+                </div>
+                <div class="col-lg-6">
+                  <p class="fs-6">{{ job.industry }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1 class="fw-bold fs-5">Functional Area:</h1>
+                </div>
+                <div class="col-lg-6">
+                  <p class="fs-6">{{ job.functionalArea }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1 class="fw-bold fs-5">Total Positions:</h1>
+                </div>
+                <div class="col-lg-6">
+                  <p class="fs-6">{{ job.totalPositions }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1 class="fw-bold fs-5">Job Shift:</h1>
+                </div>
+                <div class="col-lg-6">
+                  <p class="fs-6">{{ job.jobShift }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1 class="fw-bold fs-5">Job Type:</h1>
+                </div>
+                <div class="col-lg-6">
+                  <p class="fs-6">{{ job.jobType }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1 class="fw-bold fs-5">Job Location:</h1>
+                </div>
+                <div class="col-lg-6">
+                  <p class="fs-6">{{ job.jobLocation }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1 class="fw-bold fs-5">Gender:</h1>
+                </div>
+                <div class="col-lg-6">
+                  <p class="fs-6">{{ job.gender }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1 class="fw-bold fs-5">Minimum Education:</h1>
+                </div>
+                <div class="col-lg-6">
+                  <p class="fs-6">{{ job.minimumEducation }}</p>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1 class="fw-bold fs-5">Career Level:</h1>
+                </div>
+                <div class="col-lg-6">
+                  <p class="fs-6">{{ job.careerLevel }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1 class="fw-bold fs-5">Minimum Experience:</h1>
+                </div>
+                <div class="col-lg-6">
+                  <p class="fs-6">{{ job.minimumExpertise }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1 class="fw-bold fs-5">Apply Before:</h1>
+                </div>
+                <div class="col-lg-6">
+                  <p class="fs-6">{{ job.applyBefore }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h1 class="fw-bold fs-5">Posting date:</h1>
+                </div>
+                <div class="col-lg-6">
+                  <p class="fs-6">{{ job.postingDate }}</p>
+                </div>
+              </div>
+              <div>
+                <hr />
+                <h1 class="fs-5 fw-bold jobDesc">Job Description</h1>
+                <div>
+                  <ul class="fs-6">
+                    <li>{{ job.jobDesc }}</li>
+                  </ul>
+                </div>
+                <h1 class="fs-5 fw-bold jobDesc2">
+                  Knowledge of the following will be considered as an advantage:
+                </h1>
+                <div>
+                  <ul class="fs-6">
+                    <li>
+                      {{ job.extraKnowledge }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="rounded bg-white mb-2"
+              type="button "
+              (click)="showText()"
+            >
+              {{ isReadMore ? "Job Details" : "Read Less" }}
+            </button>
+          </div>
+          <div class="col-lg-4 offset-1 mb-2">
+            <button
+              class="btn border-primary fw-bold btnAll"
+              (click)="moveToJobs()"
+            >
+              Apply
+            </button>
+          </div>
+          <hr class="hr" />
+        </div>
+      </ng-container>
+      <!-- <div class="row">
+        <div class="col-lg-4">
+          <p class="fs-3">Mern Stack Developer</p>
+          <p
+            class="fs-4"
+            [ngClass]="{ limitTextHeight: isReadMore }"
+            data-aos="fade-up"
+          >
+            Here at CSV, employees have common interests and perceive themselves
+            as part of a large dynamic and interested family. Whenever, an
+            employee comes up with revolutionary idea they are always motivated
+            by their coworkers and superiors, this makes them excited to think
+            out of the box. At CSV, alongside professional growth employees get
+            opportunities for their physical and psychological development as
+            well. Various activities are arranged like table tennis and chess
+            competitions, hiking and road trips, surprise birthday and pizza
+            parties, biannual appraisal dinners and the list goes on. Employees
+            are always encouraged and cheered up to actively participate in
+            these activities.<b> CSV --- a fun place to work at!!!</b> Employee
+            reward and practical perks program has gained us their trust and
+            positive feedback. Transparent communication with our employees
+            fuels our success and strong corporate culture.
+          </p>
+          <button
+            class="rounded bg-white mb-2"
+            type="button "
+            (click)="showText()"
+          >
+            {{ isReadMore ? "Job Details" : "Read Less" }}
+          </button>
+        </div>
+        <div class="col-lg-4 offset-1 mb-2">
+          <button class="btn border-primary fw-bold btnAll">Apply</button>
+        </div>
+        <hr class="hr" />
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <p class="fs-3">.Net Developer</p>
+          <p
+            class="fs-4"
+            [ngClass]="{ limitTextHeight: isReadMore }"
+            data-aos="fade-up"
+          >
+            Here at CSV, employees have common interests and perceive themselves
+            as part of a large dynamic and interested family. Whenever, an
+            employee comes up with revolutionary idea they are always motivated
+            by their coworkers and superiors, this makes them excited to think
+            out of the box. At CSV, alongside professional growth employees get
+            opportunities for their physical and psychological development as
+            well. Various activities are arranged like table tennis and chess
+            competitions, hiking and road trips, surprise birthday and pizza
+            parties, biannual appraisal dinners and the list goes on. Employees
+            are always encouraged and cheered up to actively participate in
+            these activities.<b> CSV --- a fun place to work at!!!</b> Employee
+            reward and practical perks program has gained us their trust and
+            positive feedback. Transparent communication with our employees
+            fuels our success and strong corporate culture.
+          </p>
+          <button
+            class="rounded bg-white mb-2"
+            type="button "
+            (click)="showText()"
+          >
+            {{ isReadMore ? "Job Details" : "Read Less" }}
+          </button>
+        </div>
+        <div class="col-lg-4 offset-1 mb-2">
+          <button class="btn border-primary fw-bold btnAll">Apply</button>
+        </div>
+        <hr class="hr" />
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <p class="fs-3">Project Manager</p>
+          <p
+            class="fs-4"
+            [ngClass]="{ limitTextHeight: isReadMore }"
+            data-aos="fade-up"
+          >
+            Here at CSV, employees have common interests and perceive themselves
+            as part of a large dynamic and interested family. Whenever, an
+            employee comes up with revolutionary idea they are always motivated
+            by their coworkers and superiors, this makes them excited to think
+            out of the box. At CSV, alongside professional growth employees get
+            opportunities for their physical and psychological development as
+            well. Various activities are arranged like table tennis and chess
+            competitions, hiking and road trips, surprise birthday and pizza
+            parties, biannual appraisal dinners and the list goes on. Employees
+            are always encouraged and cheered up to actively participate in
+            these activities.<b> CSV --- a fun place to work at!!!</b> Employee
+            reward and practical perks program has gained us their trust and
+            positive feedback. Transparent communication with our employees
+            fuels our success and strong corporate culture.
+          </p>
+          <button
+            class="rounded bg-white mb-2"
+            type="button "
+            (click)="showText()"
+          >
+            {{ isReadMore ? "Job Details" : "Read Less" }}
+          </button>
+        </div>
+        <div class="col-lg-4 offset-1 mb-2">
+          <button class="btn border-primary fw-bold btnAll">Apply</button>
+        </div>
+        <hr class="hr" />
+      </div> -->
+    </section>
   </div>
 </div>
