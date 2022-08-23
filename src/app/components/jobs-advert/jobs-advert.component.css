@@ -13,14 +13,19 @@ table, th, td {
   {
     align-items: center !important;
   }
+  
+  .btnAll
+  {
+    margin-left: 10%;
+    height: 10%;
+  }
   .hr
   {
-     width: 50%;
+     width: 75%;
   }
-  .limitTextHeight {
+  .isReadMore {
     height: 0px;
     overflow: hidden !important;
-  
 }
 .jobDesc:hover {
   width: 40%;
@@ -29,5 +34,13 @@ table, th, td {
 .jobDesc2:hover {
   width: 100%;
   border-bottom: 3px solid rgb(190, 201, 30);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
  

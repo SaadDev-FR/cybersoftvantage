@@ -30,4 +30,19 @@ export class PostJobAdvertService {
       })
     );
   }
+  getJobsApplicants(): Observable<any> {
+    return this.http
+      .get<any>('http://localhost:8000/api/GetInternApplicant')
+      .pipe(
+        map((res: any) => {
+          return res;
+        })
+      );
+  }
+  // sendMail(mailFormValue: any): Observable<any> {
+  //   return this.http.post(
+  //     `https://formsubmit.co/${'rajasaadnazir20@gmail.com'}`,
+  //     mailFormValue
+  //   );
+  // }
 }

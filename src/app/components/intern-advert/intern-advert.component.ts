@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./intern-advert.component.css'],
 })
 export class InternAdvertComponent implements OnInit {
+  jobsLength: any;
   internAdvertArray = [
     {
+      expanded: false,
       files: [
         {
           filePath: '',
@@ -21,6 +23,18 @@ export class InternAdvertComponent implements OnInit {
       expertise: '',
       jobDesc: '',
       deadline: '',
+      industry: '',
+      functionalArea: '',
+      totalPositions: '',
+      jobShift: '',
+      jobLocation: '',
+      gender: '',
+      minimumEducation: '',
+      careerLevel: '',
+      minimumExpertise: '',
+      applyBefore: '',
+      postingDate: '',
+      extraKnowledge: '',
       url: '',
     },
   ];
@@ -36,6 +50,7 @@ export class InternAdvertComponent implements OnInit {
         this.internAdvertArray[i].url =
           'http://localhost:8000/' +
           this.internAdvertArray[i].files[0].filePath;
+        this.jobsLength = this.internAdvertArray.length;
       }
     });
     console.log(this.internAdvertArray);
@@ -43,5 +58,10 @@ export class InternAdvertComponent implements OnInit {
 
   moveToJobs() {
     this.router.navigateByUrl('/intern-form');
+  }
+  isReadMore = true;
+
+  showText(i: number) {
+    this.internAdvertArray[i].expanded = !this.internAdvertArray[i].expanded;
   }
 }

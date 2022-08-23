@@ -8,3 +8,34 @@ table, th, td {
   * p{
     font-family: 'Assistant', sans-serif;
   }
+  .hide {
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+  .btnAll
+  {
+    margin-left: 10%;
+    height: 10%;
+  }
+  .JobForm{
+    width: 50%;
+  }
+  
+ 
+  @media (max-width: 576px) {
+    .colmn
+    {
+      width:unset !important;
+    }
+    .JobForm{
+      width: 100% !important;
+    }
+    .form-control
+    {
+      width: 100% !important;
+    }
+    
+  }

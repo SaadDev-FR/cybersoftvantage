@@ -1,3 +1,4 @@
+import { AdminServiceService } from './../../../shared/adminService/admin-service.service';
 import { Router } from '@angular/router';
 import { PostInternPostService } from './../../../shared/internService/post-intern-post.service';
 import { PostJobAdvertService } from './../../../shared/jobService/post-job-advert.service';
@@ -13,14 +14,65 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./admin-home.component.css'],
 })
 export class AdminHomeComponent implements OnInit {
+  //  getInternData
+
+  InterneeData = [
+    {
+      files: [
+        {
+          filePath: '',
+          fileType: '',
+        },
+      ],
+      name: '',
+      pNum: '',
+      email: '',
+      expertise: '',
+      url: '',
+    },
+  ];
+  jobsData = [
+    {
+      files: [
+        {
+          filePath: '',
+          fileType: '',
+        },
+      ],
+      name: '',
+      pNum: '',
+      email: '',
+      expertise: '',
+      url: '',
+    },
+  ];
+  applicantsLength: any;
   constructor(
     private postJobServ: PostJobAdvertService,
     private interServ: PostInternPostService,
     private teamServ: TeamServiceService,
-    private http: HttpClient,
+    private internData: PostInternPostService,
+
     private router: Router
   ) {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.internData.getInternApplicants().subscribe((res) => {
+      this.InterneeData = res;
+      for (let i = 0; i < this.InterneeData.length; i++) {
+        this.InterneeData[i].url =
+          'http://localhost:8000/' + this.InterneeData[i].files[0].filePath;
+        this.applicantsLength = this.InterneeData.length;
+      }
+    });
+    this.postJobServ.getJobsApplicants().subscribe((res) => {
+      this.jobsData = res;
+      for (let i = 0; i < this.jobsData.length; i++) {
+        this.jobsData[i].url =
+          'http://localhost:8000/' + this.jobsData[i].files[0].filePath;
+        this.applicantsLength = this.jobsData.length;
+      }
+    });
+  }
 
   // TeamFormData
   myFiles: any[] = [];

@@ -11,6 +11,7 @@ export class JobsAdvertComponent implements OnInit {
   jobsLength: any;
   JobsAdvertArray = [
     {
+      expanded: false,
       files: [
         {
           filePath: '',
@@ -51,7 +52,6 @@ export class JobsAdvertComponent implements OnInit {
         this.jobsLength = this.JobsAdvertArray.length;
       }
     });
-    console.log(this.JobsAdvertArray);
   }
 
   moveToJobs() {
@@ -59,7 +59,7 @@ export class JobsAdvertComponent implements OnInit {
   }
   isReadMore = true;
 
-  showText() {
-    this.isReadMore = !this.isReadMore;
+  showText(i: number) {
+    this.JobsAdvertArray[i].expanded = !this.JobsAdvertArray[i].expanded;
   }
 }

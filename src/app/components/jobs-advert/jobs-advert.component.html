@@ -1,14 +1,24 @@
-<div class="container mb-4 mt-4">
+<div class="container mb-4 mt-4 p-2">
   <div class="container">
     <h1 class="fs-5">Latest jobs({{ jobsLength }})</h1>
     <section class="mt-5">
-      <ng-container *ngFor="let job of JobsAdvertArray">
+      <ng-container *ngFor="let job of JobsAdvertArray; let i = index">
         <div class="row">
-          <div class="col-lg-4">
-            <p class="fs-3">{{ job.jobTitle }}</p>
+          <div class="col-lg-6 col-sm-6 col-md-6">
+            <div class="d-flex applyBtn">
+              <p class="fs-3">{{ job.jobTitle }}</p>
+
+              <button
+                class="btn border-primary px-4 offset-lg-7 fw-bold btnAll mt-2"
+                (click)="moveToJobs()"
+              >
+                Apply
+              </button>
+            </div>
+
             <div
               class="fs-4"
-              [ngClass]="{ limitTextHeight: isReadMore }"
+              [ngClass]="job.expanded ? 'show' : 'hide'"
               data-aos="fade-up"
             >
               <h1 class="fs-5 fw-bold">Job Details</h1>
@@ -76,7 +86,6 @@
                   <p class="fs-6">{{ job.minimumEducation }}</p>
                 </div>
               </div>
-
               <div class="row">
                 <div class="col-lg-6">
                   <h1 class="fw-bold fs-5">Career Level:</h1>
@@ -133,130 +142,14 @@
             <button
               class="rounded bg-white mb-2"
               type="button "
-              (click)="showText()"
+              (click)="showText(i)"
             >
               {{ isReadMore ? "Job Details" : "Read Less" }}
-            </button>
-          </div>
-          <div class="col-lg-4 offset-1 mb-2">
-            <button
-              class="btn border-primary fw-bold btnAll"
-              (click)="moveToJobs()"
-            >
-              Apply
             </button>
           </div>
           <hr class="hr" />
         </div>
       </ng-container>
-      <!-- <div class="row">
-        <div class="col-lg-4">
-          <p class="fs-3">Mern Stack Developer</p>
-          <p
-            class="fs-4"
-            [ngClass]="{ limitTextHeight: isReadMore }"
-            data-aos="fade-up"
-          >
-            Here at CSV, employees have common interests and perceive themselves
-            as part of a large dynamic and interested family. Whenever, an
-            employee comes up with revolutionary idea they are always motivated
-            by their coworkers and superiors, this makes them excited to think
-            out of the box. At CSV, alongside professional growth employees get
-            opportunities for their physical and psychological development as
-            well. Various activities are arranged like table tennis and chess
-            competitions, hiking and road trips, surprise birthday and pizza
-            parties, biannual appraisal dinners and the list goes on. Employees
-            are always encouraged and cheered up to actively participate in
-            these activities.<b> CSV --- a fun place to work at!!!</b> Employee
-            reward and practical perks program has gained us their trust and
-            positive feedback. Transparent communication with our employees
-            fuels our success and strong corporate culture.
-          </p>
-          <button
-            class="rounded bg-white mb-2"
-            type="button "
-            (click)="showText()"
-          >
-            {{ isReadMore ? "Job Details" : "Read Less" }}
-          </button>
-        </div>
-        <div class="col-lg-4 offset-1 mb-2">
-          <button class="btn border-primary fw-bold btnAll">Apply</button>
-        </div>
-        <hr class="hr" />
-      </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <p class="fs-3">.Net Developer</p>
-          <p
-            class="fs-4"
-            [ngClass]="{ limitTextHeight: isReadMore }"
-            data-aos="fade-up"
-          >
-            Here at CSV, employees have common interests and perceive themselves
-            as part of a large dynamic and interested family. Whenever, an
-            employee comes up with revolutionary idea they are always motivated
-            by their coworkers and superiors, this makes them excited to think
-            out of the box. At CSV, alongside professional growth employees get
-            opportunities for their physical and psychological development as
-            well. Various activities are arranged like table tennis and chess
-            competitions, hiking and road trips, surprise birthday and pizza
-            parties, biannual appraisal dinners and the list goes on. Employees
-            are always encouraged and cheered up to actively participate in
-            these activities.<b> CSV --- a fun place to work at!!!</b> Employee
-            reward and practical perks program has gained us their trust and
-            positive feedback. Transparent communication with our employees
-            fuels our success and strong corporate culture.
-          </p>
-          <button
-            class="rounded bg-white mb-2"
-            type="button "
-            (click)="showText()"
-          >
-            {{ isReadMore ? "Job Details" : "Read Less" }}
-          </button>
-        </div>
-        <div class="col-lg-4 offset-1 mb-2">
-          <button class="btn border-primary fw-bold btnAll">Apply</button>
-        </div>
-        <hr class="hr" />
-      </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <p class="fs-3">Project Manager</p>
-          <p
-            class="fs-4"
-            [ngClass]="{ limitTextHeight: isReadMore }"
-            data-aos="fade-up"
-          >
-            Here at CSV, employees have common interests and perceive themselves
-            as part of a large dynamic and interested family. Whenever, an
-            employee comes up with revolutionary idea they are always motivated
-            by their coworkers and superiors, this makes them excited to think
-            out of the box. At CSV, alongside professional growth employees get
-            opportunities for their physical and psychological development as
-            well. Various activities are arranged like table tennis and chess
-            competitions, hiking and road trips, surprise birthday and pizza
-            parties, biannual appraisal dinners and the list goes on. Employees
-            are always encouraged and cheered up to actively participate in
-            these activities.<b> CSV --- a fun place to work at!!!</b> Employee
-            reward and practical perks program has gained us their trust and
-            positive feedback. Transparent communication with our employees
-            fuels our success and strong corporate culture.
-          </p>
-          <button
-            class="rounded bg-white mb-2"
-            type="button "
-            (click)="showText()"
-          >
-            {{ isReadMore ? "Job Details" : "Read Less" }}
-          </button>
-        </div>
-        <div class="col-lg-4 offset-1 mb-2">
-          <button class="btn border-primary fw-bold btnAll">Apply</button>
-        </div>
-        <hr class="hr" />
-      </div> -->
     </section>
   </div>
 </div>

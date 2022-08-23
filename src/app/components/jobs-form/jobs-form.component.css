@@ -12,3 +12,17 @@
     background-size: cover;
     background-attachment: fixed;
 }
+.JobForm{
+  width: 50%;
+}
+
+@media (max-width: 576px)
+{
+  .JobForm{
+    width: 100% !important;
+  }
+  .form-control
+  {
+    width: 100% !important;
+  }
+}

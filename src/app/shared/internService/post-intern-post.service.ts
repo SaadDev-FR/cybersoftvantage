@@ -25,10 +25,21 @@ export class PostInternPostService {
   }
 
   getInternAdvert(): Observable<any> {
-    return this.http.get<any>('http://localhost:8000/api/GetInternAdvert').pipe(
-      map((res: any) => {
-        return res;
-      })
-    );
+    return this.http
+      .get<any>('http://localhost:8000/api/GetInternApplicant')
+      .pipe(
+        map((res: any) => {
+          return res;
+        })
+      );
+  }
+  getInternApplicants(): Observable<any> {
+    return this.http
+      .get<any>('http://localhost:8000/api/GetInternApplicant')
+      .pipe(
+        map((res: any) => {
+          return res;
+        })
+      );
   }
 }

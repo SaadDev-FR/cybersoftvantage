@@ -307,3 +307,52 @@
   <button class="btn btn-primary mt-3" type="submit">Submit</button>
   <hr class="text-primary" />
 </form>
+<!-- EmployeeData -->
+<section>
+  <table class="border p-2 mb-5 mx-5" *ngFor="let data of jobsData">
+    <h1 class="fs-5">Applicants For Internship ({{ applicantsLength }})</h1>
+    <tr class="border p-2">
+      <th class="border p-2">Applicant Name</th>
+      <th class="border p-2">Applicant Contact</th>
+      <th class="border p-2">Applicant Email</th>
+      <th class="border p-2">Applicant Expertise</th>
+      <th class="border p-2">Applicant CV</th>
+    </tr>
+    <tr class="border p-2">
+      <td class="border p-2">{{ data.name }}</td>
+      <td class="border p-2">{{ data.pNum }}</td>
+      <td class="border p-2">{{ data.email }}</td>
+      <td class="border p-2">{{ data.expertise }}</td>
+      <td class="border p-2">
+        <a href="{{ data.url }}" style="text-decoration: none" target="_blank"
+          >CV</a
+        >
+      </td>
+    </tr>
+  </table>
+</section>
+
+<!-- interneeData -->
+<section>
+  <table class="border p-2 mb-5 mx-5" *ngFor="let data of InterneeData">
+    <h1 class="fs-5">Applicants For Internship ({{ applicantsLength }})</h1>
+    <tr class="border p-2">
+      <th class="border p-2">Applicant Name</th>
+      <th class="border p-2">Applicant Contact</th>
+      <th class="border p-2">Applicant Email</th>
+      <th class="border p-2">Applicant Expertise</th>
+      <th class="border p-2">Applicant CV</th>
+    </tr>
+    <tr class="border p-2">
+      <td class="border p-2">{{ data.name }}</td>
+      <td class="border p-2">{{ data.pNum }}</td>
+      <td class="border p-2">{{ data.email }}</td>
+      <td class="border p-2">{{ data.expertise }}</td>
+      <td class="border p-2">
+        <a href="{{ data.url }}" style="text-decoration: none" target="_blank"
+          >CV</a
+        >
+      </td>
+    </tr>
+  </table>
+</section>

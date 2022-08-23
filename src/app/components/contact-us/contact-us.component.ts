@@ -1,5 +1,7 @@
+import { PostJobAdvertService } from './../../shared/jobService/post-job-advert.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',
@@ -7,7 +9,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-us.component.css'],
 })
 export class ContactUsComponent implements OnInit {
-  constructor(private router: Router) {}
-
-  ngOnInit(): void {}
+  mailForm: any;
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private jobService: PostJobAdvertService
+  ) {}
+  ngOnInit(): void {
+    this.createForm();
+  }
+  createForm() {
+    this.mailForm = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      message: ['', [Validators.required]],
+    });
+  }
+  // submitForm() {
+  //   this.jobService.sendMail(this.mailForm.value).subscribe(
+  //     (data) => {
+  //       console.log(data);
+  //     },
+  //     (error) => {
+  //       console.log(error.message);
+  //     }
+  //   );
+  // }
 }
