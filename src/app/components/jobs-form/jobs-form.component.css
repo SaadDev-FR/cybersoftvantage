@@ -25,4 +25,9 @@
   {
     width: 100% !important;
   }
+  .chooseFileInput
+  {
+    width: 118% !important;
+  }
+
 }

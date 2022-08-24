@@ -5,3 +5,7 @@
   * p{
     font-family: 'Assistant', sans-serif;
   }
+  .textField
+  {
+    height: 100% !important;
+  }

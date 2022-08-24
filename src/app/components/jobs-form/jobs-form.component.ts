@@ -18,6 +18,7 @@ export class JobsFormComponent implements OnInit {
     name: new FormControl('', Validators.required),
     pNum: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
+    jTitle: new FormControl('', Validators.required),
     expertise: new FormControl('', Validators.required),
     file: new FormControl('', Validators.required),
   });
@@ -34,7 +35,8 @@ export class JobsFormComponent implements OnInit {
     formData3.append('name', this.applyJobForm.value.name);
     formData3.append('pNum', this.applyJobForm.value.pNum);
     formData3.append('email', this.applyJobForm.value.email);
-    formData3.append('expertise', this.applyJobForm.value.expertise);
+    formData3.append('jTitle', this.applyJobForm.value.jTitle),
+      formData3.append('expertise', this.applyJobForm.value.expertise);
     for (var i = 0; i < this.myFiles3.length; i++) {
       formData3.append('files', this.myFiles3[i]);
     }

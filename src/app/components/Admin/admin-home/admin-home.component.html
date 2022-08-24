@@ -78,9 +78,9 @@
       type="text"
       class="form-control w-50"
     />
-    <label for="  minimumExpertise">Expertise</label>
+    <label for="minimumExpertise">Expertise</label>
     <input
-      formControlName="  minimumExpertise"
+      formControlName="minimumExpertise"
       id="  minimumExpertise"
       type="text"
       class="form-control w-50"
@@ -216,7 +216,7 @@
     />
     <label for="  minimumExpertise">Expertise</label>
     <input
-      formControlName="  minimumExpertise"
+      formControlName="minimumExpertise"
       id="  minimumExpertise"
       type="text"
       class="form-control w-50"
@@ -307,10 +307,12 @@
   <button class="btn btn-primary mt-3" type="submit">Submit</button>
   <hr class="text-primary" />
 </form>
+<hr />
 <!-- EmployeeData -->
 <section>
+  <h1 class="mx-5 mb-5">Applicants for Job</h1>
+  <h1 class="fs-5 mx-5">Applicants({{ jobApplicantsLength }})</h1>
   <table class="border p-2 mb-5 mx-5" *ngFor="let data of jobsData">
-    <h1 class="fs-5">Applicants For Internship ({{ applicantsLength }})</h1>
     <tr class="border p-2">
       <th class="border p-2">Applicant Name</th>
       <th class="border p-2">Applicant Contact</th>
@@ -334,8 +336,9 @@
 
 <!-- interneeData -->
 <section>
+  <h1 class="mx-5 mb-5">Applicants for Internship</h1>
+  <h1 class="fs-5 mx-5">Applicants ({{ internApplicantsLength }})</h1>
   <table class="border p-2 mb-5 mx-5" *ngFor="let data of InterneeData">
-    <h1 class="fs-5">Applicants For Internship ({{ applicantsLength }})</h1>
     <tr class="border p-2">
       <th class="border p-2">Applicant Name</th>
       <th class="border p-2">Applicant Contact</th>
@@ -352,6 +355,28 @@
         <a href="{{ data.url }}" style="text-decoration: none" target="_blank"
           >CV</a
         >
+      </td>
+    </tr>
+  </table>
+</section>
+<hr />
+<section>
+  <h1 class="text-center">Contact Us Data</h1>
+  <h1 class="fs-5 mx-5">Total Messages({{ contactApplicantsLength }})</h1>
+  <table class="border p-2 mb-5 mx-5" *ngFor="let data of contactusData">
+    <div class="contactUSHeading"></div>
+
+    <tr class="border p-2">
+      <th class="border p-2">Name</th>
+      <th class="border p-2">Email</th>
+      <th class="border p-2">Message</th>
+    </tr>
+    <tr class="border p-2">
+      <td></td>
+      <td class="border p-2">{{ data.name }}</td>
+      <td class="border p-2">{{ data.email }}</td>
+      <td class="textField border p-2 w-100">
+        <textarea class="w-100" readonly>{{ data.message }}</textarea>
       </td>
     </tr>
   </table>

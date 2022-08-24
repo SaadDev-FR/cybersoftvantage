@@ -12,3 +12,19 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+@media (max-width: 576px)
+{
+  .JobForm{
+    width: 100% !important;
+  }
+  .form-control
+  {
+    width: 100% !important;
+  }
+  .chooseFileInput
+  {
+    width: 118% !important;
+  }
+
+}

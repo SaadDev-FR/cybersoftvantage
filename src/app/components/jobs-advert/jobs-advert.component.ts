@@ -57,7 +57,6 @@ export class JobsAdvertComponent implements OnInit {
   moveToJobs() {
     this.router.navigateByUrl('/jobs-form');
   }
-  isReadMore = true;
 
   showText(i: number) {
     this.JobsAdvertArray[i].expanded = !this.JobsAdvertArray[i].expanded;

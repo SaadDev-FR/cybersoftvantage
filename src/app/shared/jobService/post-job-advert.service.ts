@@ -39,10 +39,19 @@ export class PostJobAdvertService {
         })
       );
   }
-  // sendMail(mailFormValue: any): Observable<any> {
-  //   return this.http.post(
-  //     `https://formsubmit.co/${'rajasaadnazir20@gmail.com'}`,
-  //     mailFormValue
-  //   );
-  // }
+  getContactUsData(): Observable<any> {
+    return this.http.get<any>('http://localhost:8000/api/GetcontactUs').pipe(
+      map((res: any) => {
+        return res;
+      })
+    );
+  }
+
+  postContactUsData(mailFormValue: any): Observable<any> {
+    console.log(mailFormValue.value);
+    return this.http.post(
+      'http://localhost:8000/api/contactUsData',
+      mailFormValue.value
+    );
+  }
 }

@@ -9,6 +9,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./contact-us.component.css'],
 })
 export class ContactUsComponent implements OnInit {
+  
   mailForm: any;
   constructor(
     private formBuilder: FormBuilder,
@@ -25,14 +26,11 @@ export class ContactUsComponent implements OnInit {
       message: ['', [Validators.required]],
     });
   }
-  // submitForm() {
-  //   this.jobService.sendMail(this.mailForm.value).subscribe(
-  //     (data) => {
-  //       console.log(data);
-  //     },
-  //     (error) => {
-  //       console.log(error.message);
-  //     }
-  //   );
-  // }
+  submitForm() {
+    this.jobService.postContactUsData(this.mailForm).subscribe((res) => {
+      alert(res);
+    });
+  }
+
+  //
 }

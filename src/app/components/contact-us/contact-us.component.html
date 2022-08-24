@@ -1,43 +1,104 @@
-<div class="container">
-  <h1>FormSubmit Demo</h1>
-  <form
-    target="_blank"
-    action="https://formsubmit.co/your@email.com"
-    method="POST"
-  >
-    <div class="form-group">
-      <div class="form-row">
-        <div class="col">
-          <input
-            type="text"
-            name="name"
-            class="form-control"
-            placeholder="Full Name"
-            required
-          />
-        </div>
-        <div class="col">
-          <input
-            type="email"
-            name="email"
-            class="form-control"
-            placeholder="Email Address"
-            required
-          />
+<section class="contact_us" data-aos="zoom-in">
+  <div class="container">
+    <div class="row justify-content-center align-items-center contactUSRow">
+      <div class="col-lg-10 col-sm-12 col-md-12">
+        <div class="contact_inner mx-4">
+          <div class="row">
+            <div class="col-lg-12 col-sm-12 col-md-12">
+              <div class="contact_form_inner">
+                <div class="contact_field">
+                  <h3 class="fw-bold">Contact Us</h3>
+                  <p style="font-size: 14px">
+                    Feel Free to contact us any time. We will get back to you as
+                    soon as we can!.
+                  </p>
+                  <form [formGroup]="mailForm" (submit)="submitForm()">
+                    <input
+                      type="text"
+                      formControlName="name"
+                      class="form-control form-group border shadow"
+                      placeholder="Name"
+                      required
+                    />
+                    <input
+                      type="email"
+                      formControlName="email"
+                      class="form-control form-group border shadow mt-1"
+                      placeholder="Email"
+                      required
+                    />
+                    <textarea
+                      formControlName="message"
+                      class="form-control form-group border shadow mt-1"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                    <button type="submit" class="contact_form_submit fw-bold">
+                      Submit
+                    </button>
+                  </form>
+                  <a
+                    class="fw-bold"
+                    href="mailto:info@cybersoftvantage.com"
+                    style="text-decoration: none"
+                  >
+                    <h3
+                      class="fw-lighter text-secondary mt-2"
+                      style="
+                        font-family: 'Assistant', sans-serif;
+                        font-size: 14px;
+                      "
+                    >
+                      Email Us on Official Email Address
+                      <span
+                        class="mx-1 text-primary fw-lighter"
+                        style="
+                          font-family: 'Assistant', sans-serif;
+                          font-size: 15px;
+                        "
+                        >Click Here</span
+                      >
+                    </h3></a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-md-12">
+              <div class="right_conatct_social_icon d-flex align-items-end">
+                <div class="socil_item_inner d-flex">
+                  <li>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact_info_sec text-white">
+            <h4>Contact Info</h4>
+            <div class="d-flex info_single align-items-center">
+              <i class="fas fa-headset"></i>
+              <span>+92 333 561 4455</span>
+            </div>
+            <div class="d-flex info_single align-items-center">
+              <i class="fas fa-envelope-open-text"></i>
+              <span>info@cybersoftvantage.com</span>
+            </div>
+            <div class="d-flex info_single align-items-center">
+              <i class="fas fa-map-marked-alt"></i>
+              <span
+                >Headquarters: Plot 94, Street 7, I-10/3, Islamabad,
+                Pakistan</span
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="form-group">
-      <textarea
-        placeholder="Your Message"
-        class="form-control"
-        name="message"
-        rows="10"
-        required
-      ></textarea>
-    </div>
-    <button type="submit" class="btn btn-lg btn-dark btn-block">
-      Submit Form
-    </button>
-  </form>
-</div>
+  </div>
+</section>

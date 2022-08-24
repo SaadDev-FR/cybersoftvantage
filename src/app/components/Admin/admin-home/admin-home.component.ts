@@ -46,30 +46,46 @@ export class AdminHomeComponent implements OnInit {
       url: '',
     },
   ];
-  applicantsLength: any;
+  jobApplicantsLength: any;
+  internApplicantsLength: any;
+  contactApplicantsLength: any;
+
+  contactusData: any = [];
   constructor(
     private postJobServ: PostJobAdvertService,
     private interServ: PostInternPostService,
     private teamServ: TeamServiceService,
     private internData: PostInternPostService,
-
     private router: Router
   ) {}
   ngOnInit(): void {
+    this.getJobApplicants();
+    this.getContactData();
+    this.getInterApplicants();
+  }
+  getContactData() {
+    this.postJobServ.getContactUsData().subscribe((res) => {
+      this.contactusData = res;
+      this.contactApplicantsLength = this.InterneeData.length;
+    });
+  }
+  getInterApplicants() {
     this.internData.getInternApplicants().subscribe((res) => {
       this.InterneeData = res;
       for (let i = 0; i < this.InterneeData.length; i++) {
         this.InterneeData[i].url =
           'http://localhost:8000/' + this.InterneeData[i].files[0].filePath;
-        this.applicantsLength = this.InterneeData.length;
+        this.internApplicantsLength = this.InterneeData.length;
       }
     });
+  }
+  getJobApplicants() {
     this.postJobServ.getJobsApplicants().subscribe((res) => {
       this.jobsData = res;
       for (let i = 0; i < this.jobsData.length; i++) {
         this.jobsData[i].url =
           'http://localhost:8000/' + this.jobsData[i].files[0].filePath;
-        this.applicantsLength = this.jobsData.length;
+        this.jobApplicantsLength = this.jobsData.length;
       }
     });
   }

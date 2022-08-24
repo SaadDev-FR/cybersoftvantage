@@ -34,6 +34,15 @@
           placeholder="name21@gmail.com"
           required
         />
+        <label for="jTitle" class="fw-bold">Job Title</label>
+        <input
+          type="text"
+          formControlName="jTitle"
+          name="jTitle"
+          class="form-control w-50 form-group"
+          placeholder="Mean/Mern"
+          required
+        />
         <label for="expertise" class="fw-bold">Expertise</label>
         <textarea
           name="expertise"
@@ -45,6 +54,7 @@
         <div class="mt-2 fw-bold">
           <label for="file">Upload CV</label><br />
           <input
+            class="chooseFileInput"
             type="file"
             formControlName="file"
             id="file"

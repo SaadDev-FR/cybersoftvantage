@@ -8,6 +8,9 @@
 body{
     color:#fff
   }
+  ::placeholder {
+    opacity: 0.5;
+  }
   .right_conatct_social_icon{
     background: #ffc107;
   }
