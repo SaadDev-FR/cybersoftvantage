@@ -41,7 +41,7 @@ export class LandingPageComponent implements OnInit {
       imageUrl: '/assets/images/testImages/contentM.png',
     },
     {
-      heading1: 'Database Design & maintenance',
+      heading1: 'Database Design & Maintenance',
       btn1: 'See More',
       imageUrl: '/assets/images/testImages/db.png',
     },
@@ -66,7 +66,7 @@ export class LandingPageComponent implements OnInit {
       imageUrl: '/assets/images/testImages/gameDev.png',
     },
     {
-      heading1: 'IT Solutions and consulting services',
+      heading1: 'IT Solutions and Consulting Services',
       btn1: 'See More',
       imageUrl: '/assets/images/testImages/consultancy.png',
     },

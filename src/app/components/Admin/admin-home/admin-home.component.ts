@@ -27,6 +27,7 @@ export class AdminHomeComponent implements OnInit {
       name: '',
       pNum: '',
       email: '',
+      jTitle: '',
       expertise: '',
       url: '',
     },
@@ -43,6 +44,7 @@ export class AdminHomeComponent implements OnInit {
       pNum: '',
       email: '',
       expertise: '',
+      jTitle: '',
       url: '',
     },
   ];
@@ -88,6 +90,7 @@ export class AdminHomeComponent implements OnInit {
         this.jobApplicantsLength = this.jobsData.length;
       }
     });
+    console.log('data', this.jobsData);
   }
 
   // TeamFormData

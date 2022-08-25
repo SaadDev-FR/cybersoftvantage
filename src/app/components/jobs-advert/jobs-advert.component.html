@@ -5,17 +5,7 @@
       <ng-container *ngFor="let job of JobsAdvertArray; let i = index">
         <div class="row">
           <div class="col-lg-6 col-sm-6 col-md-6">
-            <div class="d-flex applyBtn">
-              <p class="fs-3">{{ job.jobTitle }}</p>
-
-              <button
-                class="btn border-primary px-4 offset-lg-7 fw-bold btnAll mt-2"
-                (click)="moveToJobs()"
-              >
-                Apply
-              </button>
-            </div>
-
+            <p class="fs-3">{{ job.jobTitle }}</p>
             <div
               class="fs-4"
               [ngClass]="job.expanded ? 'show' : 'hide'"
@@ -139,13 +129,21 @@
               </div>
             </div>
 
-            <button
-              class="rounded bg-white mb-2"
-              type="button "
-              (click)="showText(i)"
-            >
-              {{ job.expanded ? "Hide" : "Job Details" }}
-            </button>
+            <div class="d-flex applyBtn">
+              <button
+                class="rounded bg-white mb-2"
+                type="button "
+                (click)="showText(i)"
+              >
+                {{ job.expanded ? "Hide" : "Job Details" }}
+              </button>
+              <button
+                class="btn border-primary px-4 offset-lg-7 fw-bold btnAll mb-2"
+                (click)="moveToJobs()"
+              >
+                Apply
+              </button>
+            </div>
           </div>
           <hr class="hr" />
         </div>

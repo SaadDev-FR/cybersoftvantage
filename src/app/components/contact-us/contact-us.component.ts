@@ -9,7 +9,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./contact-us.component.css'],
 })
 export class ContactUsComponent implements OnInit {
-  
+  submitted = false;
   mailForm: any;
   constructor(
     private formBuilder: FormBuilder,
@@ -31,6 +31,8 @@ export class ContactUsComponent implements OnInit {
       alert(res);
     });
   }
-
+  get f() {
+    return this.mailForm.controls;
+  }
   //
 }

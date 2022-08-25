@@ -1,7 +1,12 @@
 import { Router } from '@angular/router';
 import { AdminServiceService } from './../../../shared/adminService/admin-service.service';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-admin-login-panel',
@@ -9,32 +14,43 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./admin-login-panel.component.css'],
 })
 export class AdminLoginPanelComponent implements OnInit {
-  adminForm = new FormGroup({
-    email: new FormControl('', Validators.required),
-    password: new FormControl(''),
-  });
-  constructor(private adminServ: AdminServiceService, private router: Router) {}
-  ngOnInit(): void {}
+  submitted: false;
+  adminForm: FormGroup;
+
+  constructor(
+    private adminServ: AdminServiceService,
+    private router: Router,
+    private fb: FormBuilder
+  ) {}
+  ngOnInit(): void {
+    this.adminForm = this.fb.group({
+      email: new FormControl(null, Validators.required),
+      password: new FormControl(null, Validators.required),
+    });
+  }
   login() {
     const val = this.adminForm.value;
-    console.log('value is::', val);
-
-    if (val.email && val.password) {
-      console.log('service data::', this.adminServ);
-      this.adminServ
-        .login(val.email, val.password)
-
-        .subscribe((res) => {
-          console.log('User is logged in', res);
-          console.log('Token is:', res.token);
+    if (!val.email && !val.password) {
+      alert('Please Enter Email & password');
+    } else if (val.email && val.password) {
+      this.adminServ.login(val.email, val.password).subscribe(
+        (res) => {
+          console.log(res);
           if (res && res?.token) {
             localStorage.setItem('token', JSON.stringify(res.token));
-
+            alert('You are Logged in');
             this.router.navigate(['admin-home']);
           } else {
-            alert('Invalid username or password');
+            alert(res);
           }
-        });
+        },
+        (err) => {
+          alert('Credentials wrong!');
+        }
+      );
     }
+  }
+  get f() {
+    return this.adminForm.controls;
   }
 }

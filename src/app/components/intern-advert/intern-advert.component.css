@@ -17,12 +17,15 @@ table, th, td {
   }
   .btnAll
   {
-    margin-left: 10%;
+    margin-left: 8%;
     height: 10%;
+    
   }
   .JobForm{
     width: 50%;
   }
+ 
+ 
   
  
   @media (max-width: 576px) {

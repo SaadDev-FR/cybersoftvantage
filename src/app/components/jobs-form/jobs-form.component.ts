@@ -1,6 +1,11 @@
 import { PostJobAdvertService } from './../../shared/jobService/post-job-advert.service';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  Validators,
+  FormBuilder,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-jobs-form',
@@ -8,20 +13,24 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./jobs-form.component.css'],
 })
 export class JobsFormComponent implements OnInit {
-  constructor(private applyJobdServ: PostJobAdvertService) {}
-
-  ngOnInit(): void {}
-
+  submitted: false;
+  applyJobForm: FormGroup;
   myFiles3: any[] = [];
+  constructor(
+    private applyJobdServ: PostJobAdvertService,
+    private fb: FormBuilder
+  ) {}
 
-  applyJobForm = new FormGroup({
-    name: new FormControl('', Validators.required),
-    pNum: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.required),
-    jTitle: new FormControl('', Validators.required),
-    expertise: new FormControl('', Validators.required),
-    file: new FormControl('', Validators.required),
-  });
+  ngOnInit(): void {
+    this.applyJobForm = this.fb.group({
+      name: new FormControl(null, Validators.required),
+      pNum: new FormControl(null, Validators.required),
+      email: new FormControl(null, Validators.required),
+      jTitle: new FormControl(null, Validators.required),
+      expertise: new FormControl(null, Validators.required),
+      file: new FormControl(null, Validators.required),
+    });
+  }
 
   onFileChangeApplyJob(event: any) {
     for (var i = 0; i < event.target.files.length; i++) {
@@ -40,9 +49,12 @@ export class JobsFormComponent implements OnInit {
     for (var i = 0; i < this.myFiles3.length; i++) {
       formData3.append('files', this.myFiles3[i]);
     }
-
     this.applyJobdServ.applyForJob(formData3);
     this.myFiles3 = [];
     this.applyJobForm.reset();
+  }
+
+  get f() {
+    return this.applyJobForm.controls;
   }
 }

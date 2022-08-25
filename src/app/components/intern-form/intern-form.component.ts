@@ -8,13 +8,14 @@ import { PostInternPostService } from 'src/app/shared/internService/post-intern-
   styleUrls: ['./intern-form.component.css'],
 })
 export class InternFormComponent implements OnInit {
+  submitted: false;
   constructor(private internApplyServ: PostInternPostService) {}
 
   ngOnInit(): void {}
 
   myFiles3: any[] = [];
 
-  applyJobForm = new FormGroup({
+  applyInternForm = new FormGroup({
     name: new FormControl('', Validators.required),
     pNum: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
@@ -32,17 +33,20 @@ export class InternFormComponent implements OnInit {
   }
   applyIntern() {
     let formData3 = new FormData();
-    formData3.append('name', this.applyJobForm.value.name);
-    formData3.append('pNum', this.applyJobForm.value.pNum);
-    formData3.append('email', this.applyJobForm.value.email);
-    formData3.append('jTitle', this.applyJobForm.value.jTitle),
-      formData3.append('expertise', this.applyJobForm.value.expertise);
+    formData3.append('name', this.applyInternForm.value.name);
+    formData3.append('pNum', this.applyInternForm.value.pNum);
+    formData3.append('email', this.applyInternForm.value.email);
+    formData3.append('jTitle', this.applyInternForm.value.jTitle),
+      formData3.append('expertise', this.applyInternForm.value.expertise);
     for (var i = 0; i < this.myFiles3.length; i++) {
       formData3.append('files', this.myFiles3[i]);
     }
 
     this.internApplyServ.applyInternPosition(formData3);
     this.myFiles3 = [];
-    this.applyJobForm.reset();
+    this.applyInternForm.reset();
+  }
+  get f() {
+    return this.applyInternForm.controls;
   }
 }

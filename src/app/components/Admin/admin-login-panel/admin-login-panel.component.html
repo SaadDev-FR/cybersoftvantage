@@ -12,14 +12,33 @@
           placeholder="name21@gmail.com"
           required
         />
+        <div *ngIf="(submitted || f['email'].touched) && f['email'].invalid">
+          <div
+            *ngIf="f['email'].errors && f['email'].errors['required']"
+            style="color: red"
+            class="error"
+          >
+            Please Enter Email
+          </div>
+        </div>
         <label for="password" class="fw-bold">Password</label>
-        <textarea
-          name="password"
+        <input
+          type="password"
           formControlName="password"
           class="form-control w-50 form-group"
           placeholder="password"
           required
-        ></textarea>
+        />
+        <div
+          *ngIf="(submitted || f['password'].touched) && f['password'].invalid"
+        >
+          <div
+            *ngIf="f['password'].errors && f['password'].errors['required']"
+            style="color: red"
+          >
+            Please Enter Password
+          </div>
+        </div>
         <br />
         <button
           type="submit"

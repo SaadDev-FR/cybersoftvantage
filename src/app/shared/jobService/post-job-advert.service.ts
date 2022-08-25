@@ -16,7 +16,7 @@ export class PostJobAdvertService {
       });
   }
   applyForJob(data: any) {
-    this.http
+    return this.http
       .post('http://localhost:8000/api/applyJob', data)
       .subscribe((res) => {
         alert(res);
@@ -24,20 +24,18 @@ export class PostJobAdvertService {
   }
 
   getJobsAdvert(): Observable<any> {
-    return this.http.get<any>('http://localhost:8000/api/GetJobsAdvert').pipe(
+    return this.http.get<any>('http://localhost:8000/api/jobApplicants').pipe(
       map((res: any) => {
         return res;
       })
     );
   }
   getJobsApplicants(): Observable<any> {
-    return this.http
-      .get<any>('http://localhost:8000/api/GetInternApplicant')
-      .pipe(
-        map((res: any) => {
-          return res;
-        })
-      );
+    return this.http.get<any>('http://localhost:8000/api/GetJobApplicant').pipe(
+      map((res: any) => {
+        return res;
+      })
+    );
   }
   getContactUsData(): Observable<any> {
     return this.http.get<any>('http://localhost:8000/api/GetcontactUs').pipe(

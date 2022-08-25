@@ -16,15 +16,32 @@
           placeholder="Name"
           required
         />
+        <div *ngIf="(submitted || f['name'].touched) && f['name'].invalid">
+          <div
+            *ngIf="f['name'].errors && f['name'].errors['required']"
+            style="color: red"
+          >
+            Please Enter Name
+          </div>
+        </div>
+
         <label for="pNum" class="fw-bold">Contact Number</label>
         <input
-          type="text"
+          type="number"
           formControlName="pNum"
           name="pNum"
           class="form-control w-50 form-group"
           placeholder="923*********"
           required
         />
+        <div *ngIf="(submitted || f['pNum'].touched) && f['pNum'].invalid">
+          <div
+            *ngIf="f['pNum'].errors && f['pNum'].errors['required']"
+            style="color: red"
+          >
+            Please Enter Contact Number
+          </div>
+        </div>
         <label for="email" class="fw-bold">Email</label>
         <input
           type="email"
@@ -34,6 +51,15 @@
           placeholder="name21@gmail.com"
           required
         />
+        <div *ngIf="(submitted || f['email'].touched) && f['email'].invalid">
+          <div
+            *ngIf="f['email'].errors && f['email'].errors['required']"
+            style="color: red"
+          >
+            Please Enter Email
+          </div>
+        </div>
+
         <label for="jTitle" class="fw-bold">Job Title</label>
         <input
           type="text"
@@ -43,6 +69,14 @@
           placeholder="Mean/Mern"
           required
         />
+        <div *ngIf="(submitted || f['jTitle'].touched) && f['jTitle'].invalid">
+          <div
+            *ngIf="f['jTitle'].errors && f['jTitle'].errors['required']"
+            style="color: red"
+          >
+            Please Enter Job Title
+          </div>
+        </div>
         <label for="expertise" class="fw-bold">Expertise</label>
         <textarea
           name="expertise"
@@ -51,6 +85,18 @@
           placeholder="Your Expertise + Years of Experience"
           required
         ></textarea>
+        <div
+          *ngIf="
+            (submitted || f['expertise'].touched) && f['expertise'].invalid
+          "
+        >
+          <div
+            *ngIf="f['expertise'].errors && f['expertise'].errors['required']"
+            style="color: red"
+          >
+            Please Enter Expertise
+          </div>
+        </div>
         <div class="mt-2 fw-bold">
           <label for="file">Upload CV</label><br />
           <input
@@ -61,14 +107,26 @@
             name="files"
             (change)="onFileChangeApplyJob($event)"
           />
+          <div *ngIf="(submitted || f['file'].touched) && f['file'].invalid">
+            <div
+              *ngIf="f['file'].errors && f['file'].errors['required']"
+              style="color: red"
+            >
+              Please Choose File
+            </div>
+          </div>
         </div>
         <br />
         <button
           type="submit"
           class="btn bg-primary text-white contact_form_submit fw-bold"
+          [disabled]="!applyJobForm.valid"
         >
           Submit
         </button>
+        <p class="fs-6 fw-lighter mt-1">
+          Fill the Fields to Enable the Submit Button
+        </p>
       </form>
     </div>
   </div>
