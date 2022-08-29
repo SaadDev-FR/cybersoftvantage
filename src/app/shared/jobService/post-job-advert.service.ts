@@ -24,7 +24,7 @@ export class PostJobAdvertService {
   }
 
   getJobsAdvert(): Observable<any> {
-    return this.http.get<any>('http://localhost:8000/api/jobApplicants').pipe(
+    return this.http.get<any>('http://localhost:8000/api/GetJobsAdvert').pipe(
       map((res: any) => {
         return res;
       })
@@ -50,6 +50,20 @@ export class PostJobAdvertService {
     return this.http.post(
       'http://localhost:8000/api/contactUsData',
       mailFormValue.value
+    );
+  }
+  REST_API: string = 'http://localhost:8000/api';
+
+  updateBook(id: any, data: any): Observable<any> {
+    let API_URL = `${this.REST_API}/Update/${id}`;
+    return this.http.put(API_URL, data);
+  }
+
+  viewOrder(): Observable<any> {
+    return this.http.get<any>('http://localhost:8000/api/GetJobsAdvert').pipe(
+      map((res: any) => {
+        return res;
+      })
     );
   }
 }

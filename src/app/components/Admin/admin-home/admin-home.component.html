@@ -134,8 +134,7 @@
   <button class="btn btn-primary mt-3" type="submit">Submit</button>
   <hr class="text-primary" />
 </form>
-<!-- internPositionPost -->
-
+<!-- internPositionPost -->=
 <form class="mx-5 mt-5" [formGroup]="internForm" (ngSubmit)="submitIntern()">
   <h1 class="mx-5">Upload Internship Positions</h1>
   <div class="form-group">
@@ -335,7 +334,6 @@
     </tr>
   </table>
 </section>
-
 <!-- interneeData -->
 <section>
   <h1 class="mx-5 mb-5">Applicants for Internship</h1>
@@ -369,19 +367,146 @@
   <h1 class="fs-5 mx-5">Total Messages({{ contactApplicantsLength }})</h1>
   <table class="border p-2 mb-5 mx-5" *ngFor="let data of contactusData">
     <div class="contactUSHeading"></div>
-
     <tr class="border p-2">
       <th class="border p-2">Name</th>
       <th class="border p-2">Email</th>
       <th class="border p-2">Message</th>
     </tr>
-    <tr class="border p-2">
-      <td></td>
-      <td class="border p-2">{{ data.name }}</td>
-      <td class="border p-2">{{ data.email }}</td>
-      <td class="textField border p-2 w-100">
-        <textarea class="w-100" readonly>{{ data.message }}</textarea>
+    <tr class="border">
+      <td class="border p-5">{{ data.name }}</td>
+      <td class="border p-5">{{ data.email }}</td>
+
+      <td class="p-5">
+        <p class="">
+          {{ data.message }}
+        </p>
       </td>
     </tr>
   </table>
 </section>
+<!-- viewJobAdvert -->
+<ng-container>
+  <div class="card-table">
+    <div class="card-product mt-4 mx-5">
+      <table
+        style="width: 100%"
+        class="border p-5 mt-3 mb-5"
+        *ngFor="let job of JobsAdvertArray; let i = index"
+      >
+        <tr class="border">
+          <th class="border w-25">Job Title</th>
+          <td class="border">{{ job.jobTitle }}</td>
+        </tr>
+        <tr class="border">
+          <th class="border w-25">Industry</th>
+          <td class="border mx-2">{{ job.industry }}</td>
+        </tr>
+        <tr>
+          <th class="border w-25">Functional Area</th>
+          <td class="border mx-2">{{ job.functionalArea }}</td>
+        </tr>
+        <tr class="border w-25">
+          <th class="border">Total Positions</th>
+          <td class="mx-2">{{ job.totalPositions }}</td>
+        </tr>
+        <tr class="border w-25">
+          <th class="border">job Type</th>
+          <td class="mx-2"></td>
+        </tr>
+        <tr class="border w-25">
+          <th class="border">job Location</th>
+          <td class="mx-2"></td>
+        </tr>
+        <tr class="border w-25">
+          <th class="border">job Type</th>
+          <td class="mx-2"></td>
+        </tr>
+        <tr class="border w-25">
+          <th class="border">Gender</th>
+          <td class="mx-2"></td>
+        </tr>
+        <tr class="border w-25">
+          <th class="border w-25">Total Positions</th>
+          <td class="mx-2"></td>
+        </tr>
+        <tr class="border w-25">
+          <th class="border">Minimum Education</th>
+          <td class="mx-2"></td>
+        </tr>
+        <tr class="border">
+          <th class="border">Career Level</th>
+          <td class="mx-2"></td>
+        </tr>
+        <tr class="border w-25">
+          <th class="border">Minimum Expertise</th>
+          <td class="mx-2"></td>
+        </tr>
+        <tr class="border w-25">
+          <th class="border">Apply Before</th>
+          <td></td>
+        </tr>
+        <tr class="border w-25">
+          <th class="border">Posting Date</th>
+          <td class="mx-2"></td>
+        </tr>
+        <tr class="border w-25">
+          <th class="border">job Desc</th>
+          <td class="mx-2"></td>
+        </tr>
+        <tr class="border w-25">
+          <th class="border">Extra Knowledge</th>
+          <td class="mx-2"></td>
+        </tr>
+      </table>
+
+      <!-- <table class="table-responsive border shadow mb-3 mx-5">
+        <tr class="border">
+          <th class="border-2">Job Title</th>
+          <th class="border-2">Industry</th>
+          <th class="border-2">Functional Area</th>
+          <th class="border-2">Total Positions</th>
+          <th class="border-2">job Shift</th>
+          <th class="border-2">job Type</th>
+          <th class="border-2">job Location</th>
+          <th class="border-2">Gender</th>
+        </tr>
+
+        <tr >
+          <td class="border-2 p-4">{{ job.jobTitle }}</td>
+          <td class="border-2 p-4">
+            {{ job.industry }}
+          </td>
+          <td class="border-2 p-4">{{ job.functionalArea }}</td>
+          <td class="border-2 p-4">{{ job.totalPositions }}</td>
+          <td class="border-2 p-4">{{ job.jobShift }}</td>
+          <td class="border-2 p-4">{{ job.jobType }}</td>
+          <td class="border-2 p-4">{{ job.jobLocation }}</td>
+          <td class="border-2 p-4">{{ job.gender }}</td>
+        </tr>
+        <tr class="border">
+          <th class="border-2 p-4">Minimum Education</th>
+          <th class="border-2 p-4">Career Level</th>
+          <th class="border-2 p-4">Minimum Expertise</th>
+          <th class="border-2 p-4">Apply Before</th>
+          <th class="border-2 p-4">Posting Date</th>
+          <th class="border-2 p-4">job Desc</th>
+          <th class="border-2 p-4">Extra Knowledge</th>
+        </tr>
+        <tr *ngFor="let job of JobsAdvertArray; let i = index">
+          <td class="border-2 p-4">{{ job.minimumExpertise }}</td>
+          <td class="border-2 p-4">{{ job.applyBefore }}</td>
+          <td class="border-2 p-4">{{ job.postingDate }}</td>
+          <td class="border-2 p-4">{{ job.jobDesc }}</td>
+          <td class="border-2 p-4">{{ job.extraKnowledge }}</td>
+          <td class="border-2 p-4">{{ job.minimumEducation }}</td>
+          <td class="border-2 p-4">{{ job.careerLevel }}</td>
+          <td class="border-2 p-4">
+            <button (click)="onEditClick(job._id)">Edit</button>
+            <button class="mx-2" (click)="onEditClick(job._id)">Delete</button>
+          </td>
+        </tr>
+      </table> -->
+    </div>
+  </div>
+  <!-- </ng-container>  -->
+</ng-container>

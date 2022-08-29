@@ -6,7 +6,12 @@ import { TeamServiceService } from './../../../shared/teamService/team-service.s
 import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-admin-home',
@@ -14,8 +19,19 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./admin-home.component.css'],
 })
 export class AdminHomeComponent implements OnInit {
+  isEdit: boolean = false;
+  currentProduct: any;
+  uData: FormGroup;
+  updateUserID: any;
+  myFiles: any[] = [];
+  jobApplicantsLength: any;
+  internApplicantsLength: any;
+  contactApplicantsLength: any;
+  myFiles2: any[] = [];
+  contactusData: any = [];
+  myFiles3: any[] = [];
+  jobsLength: number;
   //  getInternData
-
   InterneeData = [
     {
       files: [
@@ -48,22 +64,51 @@ export class AdminHomeComponent implements OnInit {
       url: '',
     },
   ];
-  jobApplicantsLength: any;
-  internApplicantsLength: any;
-  contactApplicantsLength: any;
+  // jobsData
+  JobsAdvertArray = [
+    {
+      expanded: false,
+      files: [
+        {
+          filePath: '',
+          fileType: '',
+        },
+      ],
+      jobTitle: '',
+      jobType: '',
+      expertise: '',
+      jobDesc: '',
+      deadline: '',
+      industry: '',
+      functionalArea: '',
+      totalPositions: '',
+      jobShift: '',
+      jobLocation: '',
+      gender: '',
+      minimumEducation: '',
+      careerLevel: '',
+      minimumExpertise: '',
+      applyBefore: '',
+      postingDate: '',
+      extraKnowledge: '',
+      url: '',
+      _id: '',
+    },
+  ];
 
-  contactusData: any = [];
   constructor(
     private postJobServ: PostJobAdvertService,
     private interServ: PostInternPostService,
     private teamServ: TeamServiceService,
     private internData: PostInternPostService,
-    private router: Router
+    private router: Router,
+    private fb: FormBuilder
   ) {}
   ngOnInit(): void {
     this.getJobApplicants();
     this.getContactData();
     this.getInterApplicants();
+    this.getJobsAdvert();
   }
   getContactData() {
     this.postJobServ.getContactUsData().subscribe((res) => {
@@ -90,11 +135,10 @@ export class AdminHomeComponent implements OnInit {
         this.jobApplicantsLength = this.jobsData.length;
       }
     });
-    console.log('data', this.jobsData);
   }
 
   // TeamFormData
-  myFiles: any[] = [];
+
   myForm = new FormGroup({
     jobTitle: new FormControl('', Validators.required),
     industry: new FormControl('', Validators.required),
@@ -144,7 +188,6 @@ export class AdminHomeComponent implements OnInit {
     for (var i = 0; i < this.myFiles.length; i++) {
       formData.append('files', this.myFiles[i]);
     }
-
     this.postJobServ.postJob(formData);
     this.myFiles = [];
     this.myForm.reset();
@@ -152,9 +195,6 @@ export class AdminHomeComponent implements OnInit {
   // TeamFormDataEnd
 
   //NewJobAdvert
-
-  myFiles2: any[] = [];
-
   internForm = new FormGroup({
     jobTitle: new FormControl('', Validators.required),
     industry: new FormControl('', Validators.required),
@@ -176,8 +216,6 @@ export class AdminHomeComponent implements OnInit {
 
   onFileChangeIntern(event: any) {
     for (var i = 0; i < event.target.files.length; i++) {
-      // const mimetype = this.myFiles[0].fileType;
-      // if(mimetype=="image/jpg" || mimetype=="image/jpeg" || mimetype== "image/png" || mimetype=="video/mp4")
       this.myFiles2.push(event.target.files[i]);
     }
   }
@@ -215,9 +253,6 @@ export class AdminHomeComponent implements OnInit {
   // //NewJobAdvertEnd
 
   //TeamUpload
-
-  myFiles3: any[] = [];
-
   TeamForm = new FormGroup({
     name: new FormControl('', Validators.required),
     designation: new FormControl('', Validators.required),
@@ -230,7 +265,6 @@ export class AdminHomeComponent implements OnInit {
       // if(mimetype=="image/jpg" || mimetype=="image/jpeg" || mimetype== "image/png" || mimetype=="video/mp4")
       this.myFiles3.push(event.target.files[i]);
     }
-    console.log('test::', this.TeamForm.value);
   }
   submitTeam() {
     let formData3 = new FormData();
@@ -249,5 +283,56 @@ export class AdminHomeComponent implements OnInit {
     localStorage.removeItem('token');
     this.router.navigate(['admin-login-panel']);
     return true;
+  }
+
+  getJobsAdvert() {
+    this.postJobServ.getJobsAdvert().subscribe((res) => {
+      this.JobsAdvertArray = res;
+      for (let i = 0; i < this.JobsAdvertArray.length; i++) {
+        this.JobsAdvertArray[i].url =
+          'http://localhost:8000/' + this.JobsAdvertArray[i].files[0].filePath;
+        this.jobsLength = this.JobsAdvertArray.length;
+      }
+    });
+  }
+  onEditClick(_id: any) {
+    this.isEdit = !this.isEdit;
+    let currentProduct = this.JobsAdvertArray.find((p) => {
+      this.updateUserID = _id;
+      return p._id === _id;
+    });
+    this.myForm?.setValue({
+      jobTitle: currentProduct.jobTitle,
+      industry: currentProduct.industry,
+      functionalArea: currentProduct.functionalArea,
+      totalPositions: currentProduct.totalPositions,
+      jobShift: currentProduct.jobShift,
+      jobType: currentProduct.jobType,
+      jobLocation: currentProduct.jobLocation,
+      gender: currentProduct.gender,
+      minimumEducation: currentProduct.minimumEducation,
+      careerLevel: currentProduct.careerLevel,
+      minimumExpertise: currentProduct.minimumExpertise,
+      applyBefore: currentProduct.applyBefore,
+      postingDate: currentProduct.postingDate,
+      jobDesc: currentProduct.jobDesc,
+      extraKnowledge: currentProduct.extraKnowledge,
+      file: currentProduct.files,
+    });
+  }
+  ViewAllOrder() {
+    this.postJobServ.viewOrder().subscribe((res) => {
+      this.JobsAdvertArray = res;
+    });
+  }
+  onUpdate(): any {
+    this.postJobServ
+      .updateBook(this.updateUserID, this.myForm.value)
+      .subscribe((err) => {});
+    alert('Data Updated Successfully');
+  }
+
+  showText(i: number) {
+    this.JobsAdvertArray[i].expanded = !this.JobsAdvertArray[i].expanded;
   }
 }

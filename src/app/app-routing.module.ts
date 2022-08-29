@@ -39,7 +39,6 @@ const routes: Routes = [
   { path: 'admin-login-panel', component: AdminLoginPanelComponent },
   { path: 'admin-login-panel', component: AdminHomeComponent },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
