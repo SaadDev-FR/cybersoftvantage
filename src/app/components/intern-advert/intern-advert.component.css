@@ -24,6 +24,14 @@ table, th, td {
   .JobForm{
     width: 50%;
   }
+  .jobDesc:hover {
+    width: 40%;
+    border-bottom: 3px solid rgb(190, 201, 30);
+  }
+  .jobDesc2:hover {
+    width: 100%;
+    border-bottom: 3px solid rgb(190, 201, 30);
+  }
  
  
   

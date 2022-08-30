@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { data } from 'jquery';
 import { map, Observable } from 'rxjs';
 
 @Injectable({
@@ -65,5 +66,8 @@ export class PostJobAdvertService {
         return res;
       })
     );
+  }
+  deleteJob(id: string): Observable<any> {
+    return this.http.delete(`http://localhost:8000/api/${id}`);
   }
 }

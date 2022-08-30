@@ -30,7 +30,7 @@ export class AdminHomeComponent implements OnInit {
   myFiles2: any[] = [];
   contactusData: any = [];
   myFiles3: any[] = [];
-  jobsLength: number;
+  jobsLength: any;
   //  getInternData
   InterneeData = [
     {
@@ -113,7 +113,7 @@ export class AdminHomeComponent implements OnInit {
   getContactData() {
     this.postJobServ.getContactUsData().subscribe((res) => {
       this.contactusData = res;
-      this.contactApplicantsLength = this.InterneeData.length;
+      this.contactApplicantsLength = this.contactusData.length;
     });
   }
   getInterApplicants() {
@@ -134,6 +134,12 @@ export class AdminHomeComponent implements OnInit {
           'http://localhost:8000/' + this.jobsData[i].files[0].filePath;
         this.jobApplicantsLength = this.jobsData.length;
       }
+    });
+  }
+  getJobsAdvert() {
+    this.postJobServ.getJobsAdvert().subscribe((res) => {
+      this.JobsAdvertArray = res;
+      this.jobsLength = this.JobsAdvertArray.length;
     });
   }
 
@@ -285,22 +291,14 @@ export class AdminHomeComponent implements OnInit {
     return true;
   }
 
-  getJobsAdvert() {
-    this.postJobServ.getJobsAdvert().subscribe((res) => {
-      this.JobsAdvertArray = res;
-      for (let i = 0; i < this.JobsAdvertArray.length; i++) {
-        this.JobsAdvertArray[i].url =
-          'http://localhost:8000/' + this.JobsAdvertArray[i].files[0].filePath;
-        this.jobsLength = this.JobsAdvertArray.length;
-      }
-    });
-  }
   onEditClick(_id: any) {
     this.isEdit = !this.isEdit;
     let currentProduct = this.JobsAdvertArray.find((p) => {
       this.updateUserID = _id;
       return p._id === _id;
     });
+    window.scrollTo(0, 0);
+    this.onCloseHandled();
     this.myForm?.setValue({
       jobTitle: currentProduct.jobTitle,
       industry: currentProduct.industry,
@@ -320,6 +318,7 @@ export class AdminHomeComponent implements OnInit {
       file: currentProduct.files,
     });
   }
+
   ViewAllOrder() {
     this.postJobServ.viewOrder().subscribe((res) => {
       this.JobsAdvertArray = res;
@@ -334,5 +333,21 @@ export class AdminHomeComponent implements OnInit {
 
   showText(i: number) {
     this.JobsAdvertArray[i].expanded = !this.JobsAdvertArray[i].expanded;
+  }
+
+  onDelete(id: any, i: any) {
+    this.JobsAdvertArray.splice(i, 1);
+    this.postJobServ.deleteJob(id).subscribe((res: any) => {
+      console.log(res);
+    });
+    this.onCloseHandled();
+  }
+  display = 'none';
+
+  openDetailsModal() {
+    this.display = 'block';
+  }
+  onCloseHandled() {
+    this.display = 'none';
   }
 }
